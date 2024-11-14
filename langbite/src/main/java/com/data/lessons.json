@@ -1,0 +1,100 @@
+[
+    {
+      "moduleNumber": 1,
+      "lessonName": "Introduction to French Basics",
+      "vocabulary": [
+        { "word": "Bonjour", "meaning": "Hello" },
+        { "word": "Au revoir", "meaning": "Goodbye" },
+        { "word": "Merci", "meaning": "Thank you" },
+        { "word": "S'il vous plaît", "meaning": "Please" },
+        { "word": "Oui", "meaning": "Yes" },
+        { "word": "Non", "meaning": "No" }
+      ],
+      "grammar": "French sentences typically follow a Subject-Verb-Object order. Example: 'Je mange une pomme' (I eat an apple).",
+      "culturalNotes": "In France, you greet someone with 'Bonjour' during the day. In the evening, you would say 'Bonsoir' (Good evening).",
+      "questions": [
+        {
+          "type": "multipleChoice",
+          "question": "What is the capital of France?",
+          "options": ["Lyon", "Paris", "Marseille", "Nice"],
+          "correctAnswer": "B"
+        },
+        {
+            "type": "fillInTheBlank",
+            "sentence": "The French word for 'Thank you' is ___",
+            "correctAnswers": ["Merci"]
+        },
+        {
+          "type": "dragAndDrop",
+          "draggableItems": ["Bonjour", "Merci", "Au revoir"],
+          "dropTargets": ["Greetings", "Thanks", "Farewell"],
+          "correctMatches": {
+            "Bonjour": "Greetings",
+            "Merci": "Thanks",
+            "Au revoir": "Farewell"
+          }
+        },
+        {
+            "type": "multipleChoice",
+            "question": "What is the meaning of 'Bonjour'?",
+            "options": ["Goodbye", "Thank you", "Hello", "Please"],
+            "correctAnswer": "C"
+        },
+        {
+            "type": "fillInTheBlank",
+            "sentence": "The French word for 'Yes' is ___ and for 'No' is ___",
+            "correctAnswers": ["Oui", "Non"]
+        }
+      ]
+    },
+    {
+        "moduleNumber": 2,
+        "lessonName": "Expanding on French Basics",
+        "vocabulary": [
+            { "word": "Comment", "meaning": "How" },
+            { "word": "Ça va", "meaning": "It goes" },
+            { "word": "Bien", "meaning": "Good" },
+            { "word": "Mal", "meaning": "Bad" },
+            { "word": "Parlez-vous", "meaning": "Do you speak" },
+            { "word": "Français", "meaning": "French" }
+        ],
+        "grammar": "In French, to form a question, you can place 'Est-ce que' at the beginning of a sentence. Example: 'Est-ce que vous parlez français?' (Do you speak French?).",
+        "culturalNotes": "In France, it’s common to greet someone with 'Ça va?' (How’s it going?) as a casual way to ask how they are.",
+        "questions": [
+            {
+                "type": "multipleChoice",
+                "question": "What does 'Comment ça va?' mean?",
+                "options": ["How's it going?", "Where are you?", "What's up?", "Do you speak French?"],
+                "correctAnswer": "A"
+            },
+            {
+                "type": "fillInTheBlank",
+                "sentence": "In French, 'Do you speak French?' translates to '___ vous ___ français?'",
+                "correctAnswers": ["Parlez", "français"]
+            },
+            {
+                "type": "dragAndDrop",
+                "draggableItems": ["Comment", "Ça va", "Bien", "Mal"],
+                "dropTargets": ["How", "It goes", "Good", "Bad"],
+                "correctMatches": {
+                    "Comment": "How",
+                    "Ça va": "It goes",
+                    "Bien": "Good",
+                    "Mal": "Bad"
+                }
+            },
+            {
+                "type": "multipleChoice",
+                "question": "Which of the following is used to start a question in French?",
+                "options": ["Bonjour", "Est-ce que", "Oui", "Non"],
+                "correctAnswer": "B"
+            },
+            {
+                "type": "fillInTheBlank",
+                "sentence": "To say 'Good' in French, you would say '___'.",
+                "correctAnswers": ["Bien"]
+            }
+        ]
+    }
+  ]
+  

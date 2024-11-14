@@ -1,4 +1,4 @@
-package com.narriation;
+package com.model;
 /*
  * Class Word
  * 

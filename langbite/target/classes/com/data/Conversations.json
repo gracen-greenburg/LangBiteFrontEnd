@@ -1,0 +1,32 @@
+[
+    {
+      "conversationText": "Hello, how are you?",
+      "translation": "Bonjour, comment ça va?",
+      "difficultyLevel": "Beginner"
+    },
+    {
+      "conversationText": "Where is the train station?",
+      "translation": "Où est la gare?",
+      "difficultyLevel": "Intermediate"
+    },
+    {
+      "conversationText": "The dog is happy",
+      "translation": "Le chien est content",
+      "difficultyLevel":"Beginner"
+    },
+    {
+      "conversationText": "My professor assigned a really hard assignment.",
+      "translation": "Mon professeur m'a confié une tâche très difficile.",
+      "difficultyLevel": "Intermediate"
+    },
+    {
+      "conversationText": "I cried last night.",
+      "translation": "J'ai pleuré hier soir.",
+      "difficultyLevel": "Beginner"
+    },
+  {
+      "conversationText": "I am tall.",
+      "translation": "Je suis grand",
+      "difficultyLevel": "Beginner"
+  }
+]  

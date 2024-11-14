@@ -3,15 +3,16 @@ package com.model;
 public abstract class DataConstants {
 
     // File paths for loading/saving JSON data
-    protected static final String USER_FILE_NAME = "LangBite/speak/src/main/java/com/narriation/User.json";
-    protected static final String USER_FILE_NAME_JUNIT = "LangBite/speak/src/test/java/resources/User.json";
+   
     protected static final String LESSONS_FILE_NAME = "LangBite/.vscode/lessons.json";
-    protected static final String LESSONS_FILE_NAME_JUNIT = "LangBite/speak/src/test/java/resources/lessons.json";
-    protected static final String WORD_FILE_NAME = "LangBite/.vscode/Words.json";
-    protected static final String STORY_FILE_NAME = "LangBite/.vscode/Story.json"; 
-    protected static final String CURRENT_WORDS_FILE = "LangBite/.vscode/CurrentWords.json";
-    protected static final String GRAMMAR_RULES_FILE_NAME = "LangBite\\.vscode\\Grammar.json";
-    protected static final String USER_FILE = "LangBite/.vscode/User.json";
+    protected static final String WORD_FILE_NAME = "langbite/src/main/java/com/data/Words.json";
+    protected static final String STORY_FILE_NAME = "langbite/src/main/java/com/data/Story.json"; 
+    protected static final String CURRENT_WORDS_FILE = "langbite/src/main/java/com/data/CurrentWords.json";
+    protected static final String GRAMMAR_RULES_FILE_NAME = "langbite/src/main/java/com/data/Grammar.json";
+    protected static final String USER_FILE = "langbite/src/main/java/com/data/User.json";
+    //protected static final String USER_FILE_NAME_JUNIT = "langbite/src/main/java/com/data/lessons.json";
+    // protected static final String LESSONS_FILE_NAME_JUNIT = "langbite/src/main/java/com/data/lessons.json";
+
 
 
     // User-related JSON fields

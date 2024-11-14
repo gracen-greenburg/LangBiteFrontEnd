@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "password": "loumur123",
+      "last_name": "mur",
+      "progress": {
+        "grammarRulesCompletionPercentage": 0,
+        "connectorWordsCompletionPercentage": 0,
+        "mostCommonWordsCompletionPercentage": 0
+      },
+      "id": "d4d549ce-83e0-482b-ae25-c90b141d3e38",
+      "first_name": "lou",
+      "email": "lou@mur.com",
+      "username": "loumur"
+    }
+  ]
+}
