@@ -1,0 +1,17 @@
+[
+    {
+        "storyTitle": "Little Red Riding Hood",
+        "storyText": "Once upon a time there was a girl called Little Red Riding Hood.\n She lived with her mother in a village near a forest.\nOne day, Little Red Riding Hood went to visit her grandmother.\n She took a basket of food with her.\n On her way, Little Red Riding Hood met a wolf.\n 'Hello,' said the wolf. 'Where are you going?'\n 'I'm going to visit my grandmother who lives in the forest,' explained Little Red Riding Hood.\nThe wolf ran to her grandmother's house.\n He went inside and locked her in the wardrobe!\n He put on her nightgown and got into her bed.\nA little later, Little Red Riding Hood came into the house.\nShe knocked on teh dorr, then went inside.\nLittle Red Riding Hood went over to the Grandmother's bed.\n'Oh Granny, what big ears you have,' she said.\n'All the better to hear you with, my dear,' answered the wolf.\n'Oh Granny, what big eyes you have,' said Little Red Riding Hood.\n'All the better to see you with, my dear,' replied the wolf.\n'Oh Granny, what big teeth you have,' said Little Red Riding Hood.\n'All the better to eat you with!' roared the wolf.\n'Help!' shouted Little Red Riding Hood as she realised that there was a wolf in her grandmother's bed.\nShe ran out of the house, screaming.\nA woodcutter was nearby. He heard Little Red Riding Hood's scream and ran to the house.\nThe woodcutter hit the wolf over the head.\n The wolf ran away and Little Red Riding Hood never saw him again.\nThe End. ",
+         "wordList": ["red", "grandmother", "food","hello","bed", "door", "house", "ears", "eyes", "teeth"]       
+    }, 
+    {
+        "storyTitle": "The Tortoise and The Hare",
+        "storyText": "A Hare was making fun of the Tortoise one day for being so slow.\n'Do you ever get anywhere?' he asked with a mocking laugh.\n'Yes,' replied the Tortoise, 'and I get there sooner than you think. I'll run you a race and prove it.'\nThe Hare was much amused at the idea of running a race with the Tortoise, but for the fun of the thing he agreed.\nSo the Fox, who had consented to act as judge, marked the distance and started the runners off.\nThe Hare was soon far out of sight, and to make the Tortoise feel very deeply how ridiculous it was for him to try a race with a Hare, he lay down beside the course to take a nap until the Tortoise should catch up.\nThe Tortoise meanwhile kept going slowly but steadily, and, after a time, passed the place where the Hare was sleeping.\nBut the Hare slept on very peacefully; and when at last he did wake up, the Tortoise was near the goal.\nThe Hare now ran his swiftest, but he could not overtake the Tortoise in time.\nThe End.",
+        "wordList": ["hare", "tortoise", "race", "fun", "nap", "run", "win"]
+    }, 
+    {
+        "storyTitle": "Hickory Dickory Dock",
+        "storyText": "Hickory Dickory Dock\nThe mouse ran up the clock\nThe clock struck one\nHis fun was done\nHickory Dickory Dock",
+        "wordList": ["mouse","clock","one","done"]
+    }
+]

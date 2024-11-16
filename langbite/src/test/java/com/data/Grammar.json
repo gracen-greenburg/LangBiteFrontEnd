@@ -1,0 +1,2375 @@
+[
+    {
+        "rule": "noun-genders",
+        "rule-text": "In French, nouns are either masculine or feminine.",
+        "explanation": "<strong>Feminine noun endings:</strong><br>Most words ending in <em>-e</em> or <em>-ion</em> are feminine.<br><strong>Exceptions:</strong> Words ending in <em>-age</em>, <em>-ège</em>, <em>-é</em>, or <em>-isme</em> are usually masculine.<br><br><strong>Masculine noun endings:</strong><br>Most nouns with endings other than <em>-e</em> or <em>-ion</em> are masculine.",
+        "examples": "<strong>Feminine:</strong><br> \"la table\" (the table, ends in <em>-e</em>)<br> \"la nation\" (the nation, ends in <em>-ion</em>)<br><br><strong>Masculine:</strong><br> \"le livre\" (the book, does not end in <em>-e</em> or <em>-ion</em>)<br> \"le fromage\" (the cheese, ends in <em>-age</em>)<br> \"le musée\" (the museum, ends in <em>-é</em>)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Is the noun 'table' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'fromage' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'temps' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'homme' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'façon' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'vie' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'jour' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'travail' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'appel' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'nuit' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'maison' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'pensée' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'argent' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'nom' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'père' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'place' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'sentiment' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'fille' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'mère' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Is the noun 'cours' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'papa' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Is the noun 'monde' masculine or feminine?",
+                "options": [
+                    "masculine",
+                    "feminine"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "articles",
+        "rule-text": "Articles: Definite (le, la, les) and indefinite (un, une, des).",
+        "explanation": "Definite articles are used to refer to specific nouns, while indefinite articles are used for non-specific nouns.",
+        "examples": "<strong>Examples:</strong><br> \"le chat\" (the cat)<br> \"une maison\" (a house)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Which article would you use for 'the cat (chat)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which indefinite article would you use for 'a house (maison)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which article would you use for 'the dog (chien)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which indefinite article would you use for 'a book (livre)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which article would you use for 'the friends (amis)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which indefinite article would you use for 'some apples (pommes)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which article would you use for 'the car (voiture)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which indefinite article would you use for 'a man (homme)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which article would you use for 'the house (maison)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which indefinite article would you use for 'a girl (fille)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which article would you use for 'the children (enfants)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which indefinite article would you use for 'some shoes (chaussures)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which article would you use for 'the family (famille)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which indefinite article would you use for 'a father (père)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which article would you use for 'the mother (mère)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which indefinite article would you use for 'a table (table)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which article would you use for 'the doors (portes)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which indefinite article would you use for 'an idea (idée)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which article would you use for 'the brother (frère)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which indefinite article would you use for 'a chair (chaise)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which article would you use for 'the garden (jardin)'?",
+                "options": [
+                    "la",
+                    "le",
+                    "les"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which indefinite article would you use for 'a school (école)'?",
+                "options": [
+                    "un",
+                    "une",
+                    "des"
+                ],
+                "correctAnswer": 1
+            }
+        ]
+    },
+    {
+        "rule": "adjectives",
+        "rule-text": "Adjectives agree in gender and number with the nouns they modify.",
+        "explanation": "Adjectives must match the gender and number of the nouns they describe.",
+        "examples": "<strong>Examples:</strong><br>; \"un livre intéressant\" (an interesting book)<br>; \"une maison intéressante\" (an interesting house)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Which is the correct adjective form for 'an interesting book'?",
+                "options": [
+                    "un livre intéressante",
+                    "un livre intéressant"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'an interesting house'?",
+                "options": [
+                    "une maison intéressant",
+                    "une maison intéressante"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a beautiful car'?",
+                "options": [
+                    "une voiture beau",
+                    "une voiture belle"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a big house'?",
+                "options": [
+                    "une maison grand",
+                    "une maison grande"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a small dog'?",
+                "options": [
+                    "un chien petit",
+                    "un chien petite"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a happy girl'?",
+                "options": [
+                    "une fille heureuse",
+                    "une fille heureux"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a red apple'?",
+                "options": [
+                    "une pomme rouge",
+                    "un pomme rouge"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'an old book'?",
+                "options": [
+                    "un livre vieille",
+                    "un livre vieux"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a good friend (male)'?",
+                "options": [
+                    "un bon ami",
+                    "une bonne ami"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a long story'?",
+                "options": [
+                    "une histoire longue",
+                    "une histoire long"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a green plant'?",
+                "options": [
+                    "une plante verte",
+                    "une plante vert"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a blue sky'?",
+                "options": [
+                    "un ciel bleu",
+                    "un ciel bleue"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a happy boy'?",
+                "options": [
+                    "un garçon content",
+                    "un garçon contente"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a new car'?",
+                "options": [
+                    "une voiture nouveau",
+                    "une voiture nouvelle"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a large house'?",
+                "options": [
+                    "une grande maison",
+                    "un grande maison"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'an expensive watch'?",
+                "options": [
+                    "une montre chère",
+                    "un montre cher"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a cold drink'?",
+                "options": [
+                    "une boisson froid",
+                    "une boisson froide"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct adjective form for 'a black cat'?",
+                "options": [
+                    "un chat noir",
+                    "une chat noire"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a white chair'?",
+                "options": [
+                    "une chaise blanche",
+                    "un chaise blanc"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a gentle friend (female)'?",
+                "options": [
+                    "une amie gentille",
+                    "une amie gentil"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a famous actress'?",
+                "options": [
+                    "une actrice célèbre",
+                    "un actrice célèbre"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct adjective form for 'a difficult exercise'?",
+                "options": [
+                    "un exercice difficile",
+                    "un exercice difficiles"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "plural-formation",
+        "rule-text": "Plural Formation: Generally formed by adding 's' to the singular form.",
+        "explanation": "To make nouns plural, generally add 's' to the singular form. Some nouns have irregular plural forms.",
+        "examples": "<strong>Examples:</strong><br>; \"chats\" (cats)<br>; \"tables\" (tables)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Type the plural form of 'chat'.",
+                "type": "input",
+                "expectedAnswer": "chats"
+            },
+            {
+                "text": "Type the plural form of 'table'.",
+                "type": "input",
+                "expectedAnswer": "tables"
+            },
+            {
+                "text": "Type the plural form of 'chien' (dog).",
+                "type": "input",
+                "expectedAnswer": "chiens"
+            },
+            {
+                "text": "Type the plural form of 'maison' (house).",
+                "type": "input",
+                "expectedAnswer": "maisons"
+            },
+            {
+                "text": "Type the plural form of 'livre' (book).",
+                "type": "input",
+                "expectedAnswer": "livres"
+            },
+            {
+                "text": "Type the plural form of 'fille' (girl).",
+                "type": "input",
+                "expectedAnswer": "filles"
+            },
+            {
+                "text": "Type the plural form of 'homme' (man).",
+                "type": "input",
+                "expectedAnswer": "hommes"
+            },
+            {
+                "text": "Type the plural form of 'voiture' (car).",
+                "type": "input",
+                "expectedAnswer": "voitures"
+            },
+            {
+                "text": "Type the plural form of 'école' (school).",
+                "type": "input",
+                "expectedAnswer": "écoles"
+            },
+            {
+                "text": "Type the plural form of 'pomme' (apple).",
+                "type": "input",
+                "expectedAnswer": "pommes"
+            },
+            {
+                "text": "Type the plural form of 'ordinateur' (computer).",
+                "type": "input",
+                "expectedAnswer": "ordinateurs"
+            },
+            {
+                "text": "Type the plural form of 'ami' (friend).",
+                "type": "input",
+                "expectedAnswer": "amis"
+            },
+            {
+                "text": "Type the plural form of 'chaton' (kitten).",
+                "type": "input",
+                "expectedAnswer": "chatons"
+            },
+            {
+                "text": "Type the plural form of 'chaise' (chair).",
+                "type": "input",
+                "expectedAnswer": "chaises"
+            },
+            {
+                "text": "Type the plural form of 'fenêtre' (window).",
+                "type": "input",
+                "expectedAnswer": "fenêtres"
+            },
+            {
+                "text": "Type the plural form of 'fleur' (flower).",
+                "type": "input",
+                "expectedAnswer": "fleurs"
+            },
+            {
+                "text": "Type the plural form of 'enfant' (child).",
+                "type": "input",
+                "expectedAnswer": "enfants"
+            },
+            {
+                "text": "Type the plural form of 'oiseau' (bird).",
+                "type": "input",
+                "expectedAnswer": "oiseaux"
+            },
+            {
+                "text": "Type the plural form of 'jeu' (game).",
+                "type": "input",
+                "expectedAnswer": "jeux"
+            },
+            {
+                "text": "Type the plural form of 'feuille' (leaf).",
+                "type": "input",
+                "expectedAnswer": "feuilles"
+            },
+            {
+                "text": "Type the plural form of 'bateau' (boat).",
+                "type": "input",
+                "expectedAnswer": "bateaux"
+            },
+            {
+                "text": "Type the plural form of 'cadeau' (gift).",
+                "type": "input",
+                "expectedAnswer": "cadeaux"
+            }
+        ]
+    },
+    {
+        "rule": "verbs",
+        "rule-text": "Verbs: Conjugated to agree with the subject in tense, mood, and aspect.",
+        "explanation": "French verbs are conjugated based on the subject. Regular verbs follow patterns for -er, -ir, and -re endings.",
+        "examples": "<strong>Examples:</strong><br>; \"parler\" (to speak)<br>; \"finir\" (to finish)<br>; \"vendre\" (to sell)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Which is the correct form of 'parler' for 'je'?",
+                "options": [
+                    "parles",
+                    "parle",
+                    "parlons"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'finir' for 'nous'?",
+                "options": [
+                    "finis",
+                    "finissons",
+                    "finissez"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'manger' for 'tu'?",
+                "options": [
+                    "manges",
+                    "mange",
+                    "mangeons"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'attendre' for 'il'?",
+                "options": [
+                    "attend",
+                    "attends",
+                    "attendent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'choisir' for 'nous'?",
+                "options": [
+                    "choisissons",
+                    "choisis",
+                    "choisissez"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'aller' for 'je'?",
+                "options": [
+                    "vais",
+                    "va",
+                    "allons"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'prendre' for 'vous'?",
+                "options": [
+                    "prenez",
+                    "prends",
+                    "prend"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'venir' for 'ils'?",
+                "options": [
+                    "vient",
+                    "viennent",
+                    "venons"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'être' for 'tu'?",
+                "options": [
+                    "es",
+                    "est",
+                    "suis"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'avoir' for 'nous'?",
+                "options": [
+                    "ai",
+                    "avons",
+                    "avez"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'faire' for 'elle'?",
+                "options": [
+                    "fait",
+                    "fais",
+                    "font"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'lire' for 'vous'?",
+                "options": [
+                    "lisons",
+                    "lit",
+                    "lisez"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which is the correct form of 'écrire' for 'je'?",
+                "options": [
+                    "écrivez",
+                    "écris",
+                    "écrit"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'mettre' for 'ils'?",
+                "options": [
+                    "mettent",
+                    "met",
+                    "mets"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'boire' for 'il'?",
+                "options": [
+                    "bois",
+                    "boit",
+                    "boivent"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'partir' for 'nous'?",
+                "options": [
+                    "partons",
+                    "pars",
+                    "part"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'ouvrir' for 'je'?",
+                "options": [
+                    "ouvre",
+                    "ouvres",
+                    "ouvrent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'devoir' for 'vous'?",
+                "options": [
+                    "doit",
+                    "devez",
+                    "doivent"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'savoir' for 'ils'?",
+                "options": [
+                    "sais",
+                    "savons",
+                    "savent"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "Which is the correct form of 'voir' for 'tu'?",
+                "options": [
+                    "voit",
+                    "vois",
+                    "voyons"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which is the correct form of 'connaître' for 'elle'?",
+                "options": [
+                    "connaît",
+                    "connais",
+                    "connaissent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct form of 'vivre' for 'nous'?",
+                "options": [
+                    "vivent",
+                    "vivons",
+                    "vis"
+                ],
+                "correctAnswer": 1
+            }
+        ]
+    },
+    {
+        "rule": "negation",
+        "rule-text": "Negation: Formed by placing 'ne' before the verb and 'pas' after.",
+        "explanation": "To negate a sentence, place 'ne' before the verb and 'pas' after it.",
+        "examples": "<strong>Examples:</strong><br>; \"Je ne sais pas\" (I don't know)<br>; \"Il ne parle pas\" (He does not speak)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "How would you say 'I don't know' in French?",
+                "options": [
+                    "Je sais pas",
+                    "Je ne sais pas",
+                    "Ne sais pas",
+                    "Je sais ne pas",
+                    "Je ne sais"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'He does not speak'?",
+                "options": [
+                    "Il parle pas",
+                    "Il ne parle pas",
+                    "Parle pas",
+                    "Il parle ne pas",
+                    "Ne parle pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'She does not sing' in French?",
+                "options": [
+                    "Elle chante pas",
+                    "Elle ne chante pas",
+                    "Ne chante pas elle",
+                    "Elle ne pas chante"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'They are not coming' in French?",
+                "options": [
+                    "Ils ne viennent pas",
+                    "Ils viennent pas",
+                    "Ils ne pas viennent",
+                    "Ne viennent pas ils"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'We do not play' in French?",
+                "options": [
+                    "Nous jouons pas",
+                    "Nous ne jouons pas",
+                    "Jouons pas nous",
+                    "Ne jouons pas nous"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'You do not understand' (informal) in French?",
+                "options": [
+                    "Tu comprends pas",
+                    "Tu ne comprends pas",
+                    "Ne comprends pas tu",
+                    "Comprends pas tu"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'I do not want' in French?",
+                "options": [
+                    "Je veux pas",
+                    "Je ne veux pas",
+                    "Ne veux pas je",
+                    "Je veux ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'They do not work' in French?",
+                "options": [
+                    "Ils travaillent pas",
+                    "Ils ne travaillent pas",
+                    "Ils travaillent ne pas",
+                    "Ne travaillent pas ils"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'She does not finish' in French?",
+                "options": [
+                    "Elle finit pas",
+                    "Elle ne finit pas",
+                    "Elle ne pas finit",
+                    "Ne finit pas elle"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'We do not study' in French?",
+                "options": [
+                    "Nous étudions pas",
+                    "Nous ne étudions pas",
+                    "Nous ne étudions pas",
+                    "Nous ne étudions pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'I do not like this' in French?",
+                "options": [
+                    "Je aime pas ça",
+                    "Je n’aime pas ça",
+                    "Ne aime pas je ça",
+                    "Je aime ça ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'He does not eat' in French?",
+                "options": [
+                    "Il mange pas",
+                    "Il ne mange pas",
+                    "Ne mange pas il",
+                    "Il ne pas mange"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'You do not know' (formal) in French?",
+                "options": [
+                    "Vous savez pas",
+                    "Vous ne savez pas",
+                    "Sachez pas vous",
+                    "Ne savez pas vous"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'They do not sleep' in French?",
+                "options": [
+                    "Ils dorment pas",
+                    "Ils ne dorment pas",
+                    "Ils dorment ne pas",
+                    "Ne dorment pas ils"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'We do not write' in French?",
+                "options": [
+                    "Nous écrivons pas",
+                    "Nous ne écrivons pas",
+                    "Ne écrivons pas nous",
+                    "Nous ne écrivons pas"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "text": "How would you say 'He does not leave' in French?",
+                "options": [
+                    "Il part pas",
+                    "Il ne part pas",
+                    "Ne part pas il",
+                    "Il part ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'She does not open the door' in French?",
+                "options": [
+                    "Elle ouvre pas la porte",
+                    "Elle ne ouvre pas la porte",
+                    "Elle n’ouvre pas la porte",
+                    "Ne ouvre pas elle la porte"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "How would you say 'They do not dance' in French?",
+                "options": [
+                    "Ils dansent pas",
+                    "Ils ne dansent pas",
+                    "Ne dansent pas ils",
+                    "Ils dansent ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'We do not speak' in French?",
+                "options": [
+                    "Nous parlons pas",
+                    "Nous ne parlons pas",
+                    "Ne parlons pas nous",
+                    "Nous parlons ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'You do not take' (informal) in French?",
+                "options": [
+                    "Tu prends pas",
+                    "Tu ne prends pas",
+                    "Ne prends pas tu",
+                    "Tu prends ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'I do not need' in French?",
+                "options": [
+                    "J'ai besoin pas",
+                    "Je n’ai pas besoin",
+                    "Ne ai pas besoin je",
+                    "J'ai besoin ne pas"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'They do not listen' in French?",
+                "options": [
+                    "Ils écoutent pas",
+                    "Ils ne écoutent pas",
+                    "Ils n’écoutent pas",
+                    "Ne écoutent pas ils"
+                ],
+                "correctAnswer": 2
+            }
+        ]
+    },
+    {
+        "rule": "question-formation",
+        "rule-text": "Question Formation: Inversion of the subject and verb, or using 'est-ce que'.",
+        "explanation": "Form questions by inverting the subject and verb, or by using 'est-ce que' at the beginning.",
+        "examples": "<strong>Examples:</strong><br>; \"Parlez-vous français?\" (Do you speak French?)<br>; \"Est-ce que vous parlez français?\" (Do you speak French?)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "Which of these means 'Do you speak French?'",
+                "options": [
+                    "Parlez-vous français?",
+                    "Vous parlez français?",
+                    "Parlez français vous?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Are you coming?' in French using inversion?",
+                "options": [
+                    "Viens-tu?",
+                    "Tu viens?",
+                    "Tu viens est-ce que?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Is he eating?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce qu'il mange?",
+                    "Mange il?",
+                    "Il mange est-ce que?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Do they work here?' in French?",
+                "options": [
+                    "Travaillent-ils ici?",
+                    "Ils travaillent ici?",
+                    "Est-ce que ils travaillent ici?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Are we leaving?' in French using inversion?",
+                "options": [
+                    "Partons-nous?",
+                    "Nous partons?",
+                    "Partons est-ce que nous?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Does she sing?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce qu'elle chante?",
+                    "Elle chante?",
+                    "Chante-t-elle?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Do you like music?' in French?",
+                "options": [
+                    "Aimes-tu la musique?",
+                    "Est-ce que tu aimes la musique?",
+                    "Tu aimes musique?"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you ask 'Do you have a cat?' in French using inversion?",
+                "options": [
+                    "As-tu un chat?",
+                    "Tu as un chat?",
+                    "Un chat tu as?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Is he coming?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce qu'il vient?",
+                    "Il vient est-ce que?",
+                    "Vient est-ce qu'il?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Does she understand?' in French using inversion?",
+                "options": [
+                    "Comprend-elle?",
+                    "Est-ce qu'elle comprend?",
+                    "Elle comprend?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Are you hungry?' in French using inversion?",
+                "options": [
+                    "As-tu faim?",
+                    "Est-ce que tu as faim?",
+                    "Tu as faim?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Are they listening?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce qu'ils écoutent?",
+                    "Écoutent-ils?",
+                    "Ils écoutent est-ce que?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Do we understand?' in French using inversion?",
+                "options": [
+                    "Comprenons-nous?",
+                    "Nous comprenons?",
+                    "Est-ce que nous comprenons?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Are you reading?' in French using inversion?",
+                "options": [
+                    "Lis-tu?",
+                    "Est-ce que tu lis?",
+                    "Tu lis?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Is he going to the party?' in French?",
+                "options": [
+                    "Va-t-il à la fête?",
+                    "Il va à la fête?",
+                    "Va il à la fête?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Are they eating?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce qu'ils mangent?",
+                    "Ils mangent est-ce que?",
+                    "Mangent-ils?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Do you play tennis?' in French?",
+                "options": [
+                    "Joues-tu au tennis?",
+                    "Est-ce que tu joues au tennis?",
+                    "Tu joues tennis?"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you ask 'Do they understand?' in French using inversion?",
+                "options": [
+                    "Comprennent-ils?",
+                    "Est-ce qu'ils comprennent?",
+                    "Ils comprennent?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of these means 'Do you live here?' in French using 'est-ce que'?",
+                "options": [
+                    "Est-ce que tu habites ici?",
+                    "Habites-tu ici?",
+                    "Tu habites ici?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you ask 'Does he finish?' in French using inversion?",
+                "options": [
+                    "Finit-il?",
+                    "Il finit?",
+                    "Est-ce qu'il finit?"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Do they write letters?' in French?",
+                "options": [
+                    "Écrivent-ils des lettres?",
+                    "Ils écrivent des lettres?",
+                    "Écrivent des lettres ils?"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "prepositions",
+        "rule-text": "Prepositions: Used to indicate location, time, and other relationships.",
+        "explanation": "Prepositions help to show location, time, and other relationships.",
+        "examples": "<strong>Examples:</strong><br>; \"à\" (at, to)<br>; \"de\" (from, of)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "How would you say 'At what time' in French?",
+                "options": [
+                    "à quelle heure",
+                    "au quelle heure",
+                    "en quelle heure",
+                    "sur quelle heure"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'in Paris'?",
+                "options": [
+                    "à Paris",
+                    "de Paris",
+                    "en Paris",
+                    "sur Paris"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'from France' in French?",
+                "options": [
+                    "de France",
+                    "à France",
+                    "sur France",
+                    "par France"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'with friends'?",
+                "options": [
+                    "avec des amis",
+                    "à des amis",
+                    "par des amis",
+                    "sur des amis"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'for her' in French?",
+                "options": [
+                    "pour elle",
+                    "à elle",
+                    "par elle",
+                    "avec elle"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use to say 'by car'?",
+                "options": [
+                    "en voiture",
+                    "avec voiture",
+                    "sur voiture",
+                    "par voiture"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'about the movie' in French?",
+                "options": [
+                    "à propos du film",
+                    "de le film",
+                    "avec le film",
+                    "par le film"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'at the restaurant'?",
+                "options": [
+                    "au restaurant",
+                    "en restaurant",
+                    "à restaurant",
+                    "par restaurant"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'near the school' in French?",
+                "options": [
+                    "près de l'école",
+                    "avec l'école",
+                    "à côté de l'école",
+                    "par l'école"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'during the summer'?",
+                "options": [
+                    "pendant l'été",
+                    "par l'été",
+                    "sur l'été",
+                    "avec l'été"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'without a doubt' in French?",
+                "options": [
+                    "sans doute",
+                    "avec doute",
+                    "de doute",
+                    "en doute"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use to say 'in the house'?",
+                "options": [
+                    "dans la maison",
+                    "à la maison",
+                    "en la maison",
+                    "par la maison"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'towards the beach' in French?",
+                "options": [
+                    "vers la plage",
+                    "par la plage",
+                    "à la plage",
+                    "sur la plage"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'between friends'?",
+                "options": [
+                    "entre amis",
+                    "dans amis",
+                    "avec amis",
+                    "par amis"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'in front of the school' in French?",
+                "options": [
+                    "devant l'école",
+                    "sur l'école",
+                    "avec l'école",
+                    "à côté de l'école"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use to say 'after dinner'?",
+                "options": [
+                    "après le dîner",
+                    "à le dîner",
+                    "devant le dîner",
+                    "sur le dîner"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'under the table' in French?",
+                "options": [
+                    "sous la table",
+                    "en la table",
+                    "par la table",
+                    "de la table"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use for 'on the wall'?",
+                "options": [
+                    "sur le mur",
+                    "avec le mur",
+                    "à le mur",
+                    "dans le mur"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'around the corner' in French?",
+                "options": [
+                    "autour du coin",
+                    "avec le coin",
+                    "à côté du coin",
+                    "sur le coin"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which preposition would you use to say 'against the wall'?",
+                "options": [
+                    "contre le mur",
+                    "avec le mur",
+                    "à le mur",
+                    "par le mur"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'at the top of the mountain' in French?",
+                "options": [
+                    "en haut de la montagne",
+                    "sur la montagne",
+                    "par la montagne",
+                    "dans la montagne"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "possession",
+        "rule-text": "Possession: Expressed using 'de' or possessive adjectives.",
+        "explanation": "Possession is expressed using 'de' or possessive adjectives.",
+        "examples": "<strong>Examples:</strong><br>; \"le livre de Jean\" (Jean's book)<br>; \"mon livre\" (my book)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "How would you say 'Jean's book'?",
+                "options": [
+                    "le livre Jean",
+                    "le livre de Jean",
+                    "Jean le livre"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'my book'?",
+                "options": [
+                    "le livre de moi",
+                    "mon livre",
+                    "ma livre"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'Sarah's house' in French?",
+                "options": [
+                    "la maison de Sarah",
+                    "Sarah la maison",
+                    "le maison de Sarah"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which phrase means 'his car'?",
+                "options": [
+                    "sa voiture",
+                    "son voiture",
+                    "le voiture de lui"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'our family' in French?",
+                "options": [
+                    "notre famille",
+                    "nos famille",
+                    "le famille de nous"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct way to say 'their problem'?",
+                "options": [
+                    "leur problème",
+                    "les problème de eux",
+                    "son problème"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Anna's idea'?",
+                "options": [
+                    "l'idée de Anna",
+                    "l'idée d'Anna",
+                    "Anna idée"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which phrase means 'my dog'?",
+                "options": [
+                    "mon chien",
+                    "ma chien",
+                    "le chien de moi"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'his mother'?",
+                "options": [
+                    "sa mère",
+                    "son mère",
+                    "la mère de lui"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct way to say 'her phone'?",
+                "options": [
+                    "son téléphone",
+                    "sa téléphone",
+                    "le téléphone de elle"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'my friend' when the friend is male?",
+                "options": [
+                    "mon ami",
+                    "ma ami",
+                    "le ami de moi"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which phrase means 'your (formal) office'?",
+                "options": [
+                    "votre bureau",
+                    "ton bureau",
+                    "le bureau de toi"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Paul's car'?",
+                "options": [
+                    "la voiture de Paul",
+                    "Paul la voiture",
+                    "le voiture de Paul"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct way to say 'their children'?",
+                "options": [
+                    "leurs enfants",
+                    "ses enfants",
+                    "les enfants de eux"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'our dog'?",
+                "options": [
+                    "notre chien",
+                    "nos chien",
+                    "le chien de nous"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which phrase means 'her idea'?",
+                "options": [
+                    "son idée",
+                    "sa idée",
+                    "l'idée de elle"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'the student's book'?",
+                "options": [
+                    "le livre de l'étudiant",
+                    "le livre étudiant",
+                    "étudiant le livre"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct way to say 'my sister's friend'?",
+                "options": [
+                    "l'ami de ma sœur",
+                    "ma sœur l'ami",
+                    "mon sœur ami"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'his brother's car'?",
+                "options": [
+                    "la voiture de son frère",
+                    "la voiture de frère",
+                    "son frère voiture"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which phrase means 'your (informal) family'?",
+                "options": [
+                    "ta famille",
+                    "ton famille",
+                    "la famille de toi"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'Maria's house'?",
+                "options": [
+                    "la maison de Maria",
+                    "Maria la maison",
+                    "la maison de lui"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct way to say 'his idea'?",
+                "options": [
+                    "son idée",
+                    "sa idée",
+                    "l'idée de lui"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "adverb-placement",
+        "rule-text": "Adverb Placement: Generally placed after the verb.",
+        "explanation": "In French, adverbs are generally placed after the verb.",
+        "examples": "<strong>Examples:</strong><br>; \"Il parle bien\" (He speaks well)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "How would you say 'He speaks well'?",
+                "options": [
+                    "Il bien parle",
+                    "Il parle bien",
+                    "Bien il parle"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'They eat quietly'?",
+                "options": [
+                    "Ils mangent tranquillement",
+                    "Ils tranquillement mangent",
+                    "Tranquillement ils mangent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct placement for 'You (formal) learn quickly'?",
+                "options": [
+                    "Vous apprenez rapidement",
+                    "Vous rapidement apprenez",
+                    "Apprenez rapidement vous"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'She runs well'?",
+                "options": [
+                    "Elle court bien",
+                    "Elle bien court",
+                    "Bien elle court"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Where does the adverb go in 'Nous chantons joyeusement'?",
+                "options": [
+                    "after the verb",
+                    "before the verb",
+                    "at the beginning of the sentence"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'I study seriously'?",
+                "options": [
+                    "J'étudie sérieusement",
+                    "Je sérieusement étudie",
+                    "Sérieusement j'étudie"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct placement of 'souvent' in 'Ils jouent souvent'?",
+                "options": [
+                    "after 'jouent'",
+                    "before 'jouent'",
+                    "before 'Ils'"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'We visit frequently'?",
+                "options": [
+                    "Nous visitons fréquemment",
+                    "Fréquemment nous visitons",
+                    "Nous fréquemment visitons"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is correct for 'They drive slowly'?",
+                "options": [
+                    "Ils conduisent lentement",
+                    "Ils lentement conduisent",
+                    "Lentement ils conduisent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'You (informal) listen carefully'?",
+                "options": [
+                    "Tu écoutes attentivement",
+                    "Attentivement tu écoutes",
+                    "Tu attentivement écoutes"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Where should 'clairement' go in 'Je parle clairement'?",
+                "options": [
+                    "after 'parle'",
+                    "before 'parle'",
+                    "before 'Je'"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'He works hard'?",
+                "options": [
+                    "Il travaille dur",
+                    "Dur il travaille",
+                    "Il dur travaille"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is correct for 'She learns easily'?",
+                "options": [
+                    "Elle apprend facilement",
+                    "Facilement elle apprend",
+                    "Elle facilement apprend"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'They sing loudly'?",
+                "options": [
+                    "Ils chantent fort",
+                    "Fort ils chantent",
+                    "Ils fort chantent"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct placement of 'rarement' in 'Elle lit rarement'?",
+                "options": [
+                    "after 'lit'",
+                    "before 'lit'",
+                    "before 'Elle'"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'I drive carefully'?",
+                "options": [
+                    "Je conduis prudemment",
+                    "Prudemment je conduis",
+                    "Je prudemment conduis"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Where does 'constamment' go in 'Il change constamment'?",
+                "options": [
+                    "after 'change'",
+                    "before 'change'",
+                    "before 'Il'"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'She often watches'?",
+                "options": [
+                    "Elle regarde souvent",
+                    "Souvent elle regarde",
+                    "Elle souvent regarde"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the correct placement of 'rarement' in 'Je viens rarement'?",
+                "options": [
+                    "after 'viens'",
+                    "before 'viens'",
+                    "before 'Je'"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'You (plural) act kindly'?",
+                "options": [
+                    "Vous agissez gentiment",
+                    "Gentiment vous agissez",
+                    "Vous gentiment agissez"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct placement for 'Elle danse bien'?",
+                "options": [
+                    "She dances well",
+                    "Well she dances",
+                    "She well dances"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    },
+    {
+        "rule": "pronouns",
+        "rule-text": "Pronouns: Personal pronouns (je, tu, il, elle, nous, vous, ils, elles).",
+        "explanation": "French has personal pronouns, as well as direct and indirect object pronouns.",
+        "examples": "<strong>Examples:</strong><br>; \"Je le vois\" (I see him)<br>; \"Il me parle\" (He talks to me)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "What does 'je' mean?",
+                "options": [
+                    "you",
+                    "he",
+                    "I"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "What does 'elle' mean?",
+                "options": [
+                    "they",
+                    "she",
+                    "he"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What does 'tu' mean?",
+                "options": [
+                    "you (informal)",
+                    "he",
+                    "we"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'il' mean?",
+                "options": [
+                    "she",
+                    "they",
+                    "he"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "What does 'nous' mean?",
+                "options": [
+                    "we",
+                    "you",
+                    "they"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'vous' mean?",
+                "options": [
+                    "I",
+                    "you (formal/plural)",
+                    "they"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What does 'ils' mean?",
+                "options": [
+                    "they (feminine)",
+                    "you",
+                    "they (masculine or mixed)"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "text": "What does 'elles' mean?",
+                "options": [
+                    "we",
+                    "they (feminine)",
+                    "you"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which pronoun would you use for 'we'?",
+                "options": [
+                    "nous",
+                    "ils",
+                    "vous"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which pronoun means 'I'?",
+                "options": [
+                    "tu",
+                    "je",
+                    "il"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which pronoun is used for 'you' in formal situations?",
+                "options": [
+                    "tu",
+                    "vous",
+                    "il"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What does 'me' mean in French?",
+                "options": [
+                    "to me",
+                    "to him",
+                    "to her"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'te' mean in French?",
+                "options": [
+                    "to you (informal)",
+                    "to him",
+                    "to us"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'le' refer to in French?",
+                "options": [
+                    "him",
+                    "her",
+                    "us"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'la' refer to in French?",
+                "options": [
+                    "him",
+                    "her",
+                    "them"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which pronoun is used for 'they' when referring to a group of women?",
+                "options": [
+                    "elles",
+                    "ils",
+                    "nous"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which pronoun would you use to say 'he speaks'?",
+                "options": [
+                    "elle parle",
+                    "il parle",
+                    "ils parlent"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "Which pronoun would you use to say 'she sees'?",
+                "options": [
+                    "elle voit",
+                    "il voit",
+                    "vous voyez"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'nous' refer to?",
+                "options": [
+                    "we",
+                    "he",
+                    "you (informal)"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which pronoun is used for 'they' when referring to a group of men or mixed gender?",
+                "options": [
+                    "elles",
+                    "ils",
+                    "il"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What is the pronoun for 'you' when speaking informally to one person?",
+                "options": [
+                    "tu",
+                    "vous",
+                    "ils"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the French pronoun for 'us'?",
+                "options": [
+                    "vous",
+                    "nous",
+                    "je"
+                ],
+                "correctAnswer": 1
+            }
+        ]
+    },
+    {
+        "rule": "reflexive-verbs",
+        "rule-text": "Reflexive Verbs: Indicate that the subject performs an action on itself.",
+        "explanation": "Reflexive verbs show that the subject is performing the action on itself. Reflexive pronouns are used.",
+        "examples": "<strong>Examples:</strong><br>; \"se laver\" (to wash oneself)<br>; \"s’habiller\" (to dress oneself, 's'' is used instead of 'se' becuase the verb starts with a vowel or h.)",
+        "attempts": 0,
+        "correctAttempts": 0,
+        "questions": [
+            {
+                "text": "What would you say to wash oneslef??",
+                "options": [
+                    "se laver",
+                    "le laver",
+                    "s'laver"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How do you say 'to wake up' in a reflexive form in French?",
+                "options": [
+                    "se réveiller",
+                    "réveiller",
+                    "me réveiller"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which form is correct for 'I wash myself'?",
+                "options": [
+                    "je lave",
+                    "je me lave",
+                    "je se lave"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'to dress oneself' in French?",
+                "options": [
+                    "s'habiller",
+                    "habiller",
+                    "se habiller"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which is the correct reflexive pronoun for 'he'?",
+                "options": [
+                    "me",
+                    "se",
+                    "te"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What does 'se coucher' mean?",
+                "options": [
+                    "to go to bed",
+                    "to wake up",
+                    "to wash oneself"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How do you say 'to rest oneself' in French?",
+                "options": [
+                    "se reposer",
+                    "repos",
+                    "me repose"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the reflexive form for 'we dress ourselves'?",
+                "options": [
+                    "nous habillons",
+                    "nous nous habillons",
+                    "nous se habillons"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "How would you say 'she brushes her teeth' using a reflexive verb?",
+                "options": [
+                    "elle se brosse les dents",
+                    "elle brosse les dents",
+                    "elle me brosse les dents"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which reflexive verb form means 'to hurry'?",
+                "options": [
+                    "se dépêcher",
+                    "se laver",
+                    "se brosser"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How do you say 'we rest ourselves' in French?",
+                "options": [
+                    "nous reposons",
+                    "nous nous reposons",
+                    "nous se reposons"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "text": "What does 'je me lève' mean?",
+                "options": [
+                    "I get up",
+                    "I wake up",
+                    "I go to bed"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How do you say 'they (f) brush their hair' in French?",
+                "options": [
+                    "elles se brossent les cheveux",
+                    "elles brossent leurs cheveux",
+                    "elles me brossent les cheveux"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'to get dressed' using a reflexive verb?",
+                "options": [
+                    "s'habiller",
+                    "habiller",
+                    "habille"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which of the following means 'to shave oneself'?",
+                "options": [
+                    "se raser",
+                    "raser",
+                    "me raser"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'tu te lèves' mean?",
+                "options": [
+                    "you get up",
+                    "you wash",
+                    "you hurry"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How would you say 'I calm myself down'?",
+                "options": [
+                    "je me calme",
+                    "je calme",
+                    "me calme"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What is the reflexive form of 'we get up'?",
+                "options": [
+                    "nous nous levons",
+                    "nous levons",
+                    "nous se levons"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "Which form is correct for 'they (m) wake up'?",
+                "options": [
+                    "ils se réveillent",
+                    "ils se réveiller",
+                    "ils se reveilles"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "What does 'vous vous reposez' mean?",
+                "options": [
+                    "you rest",
+                    "you go to bed",
+                    "you brush"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "text": "How do you say 'I put myself to bed' in French?",
+                "options": [
+                    "je me couche",
+                    "je couche",
+                    "me couche"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    }
+]
