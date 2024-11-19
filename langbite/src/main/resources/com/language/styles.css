@@ -4,7 +4,6 @@
 .root {
     -fx-font-size: 16pt;
     -fx-font-family: "Barriecito", system-ui;
-    -fx-background-color: #649a38;
 }
 
 .title {
