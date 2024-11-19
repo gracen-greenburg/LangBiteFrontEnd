@@ -49,7 +49,7 @@
       <children>
             <ImageView fitHeight="164.0" fitWidth="143.0" layoutX="233.0" layoutY="79.0">
                <image>
-                  <Image url="@../../../../../../../../../../Downloads/Untitled%20design%20(1).png" />
+                  <Image url="https://github.com/gracen-greenburg/LangBiteFrontEnd/blob/47d130b7a2af042b283d39b19c54840c748752b2/langbite/src/main/resources/com/language/images/wavingGator.png" />
                </image>
             </ImageView>
             <Button layoutX="205.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" stylesheets="@styles.css" text="Login" AnchorPane.rightAnchor="235.0">
@@ -70,6 +70,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
+            <Label layoutX="175.0" layoutY="14.0" styleClass="title" stylesheets="@styles.css" text="LangBite" />
       </children>
     </AnchorPane>
   </children>
