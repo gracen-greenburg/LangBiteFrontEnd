@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: 'Barriecito';
+    src: url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+}
+
 .root {
     -fx-font-size: 16pt;
-    -fx-font-family: "Barriecito", system-ui;
+    -fx-font-family: "Barriecito";
 }
 
 .title {
+    -fx-background-color: #FFFFFF;
     -fx-font-size: 50pt;
-    -fx-font-family: "Barriecito", system-ui;
+    -fx-font-family: "Barriecito";
     -fx-text-fill: #578631;
+    -fx-font-size: 75px;
 }
 
 .button {
@@ -18,16 +25,30 @@
     -fx-text-fill: #e9e9e9;
     -fx-font-weight: 700;
     -fx-font-style: normal;
+    -fx-font-size: 20px;
 }
 
+.secret_button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #578631;
+    -fx-font-family: "Work Sans", sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-style: normal;
+    -fx-font-size: 11px;
+}
+
+.normal_black_text {
+    -fx-text-fill: black;
+    -fx-font-size: 11px;
+}
 .text_field {
     -fx-background-color: #e9e9e9;
     -fx-font-family: "Work Sans", sans-serif;
-    -fx-text-fill: #e9e9e9;
+    -fx-text-fill: #000000;
     -fx-font-weight: 700;
     -fx-font-style: normal;
-    top: 50%;
-    left: 50%;
+    -fx-font-size: 15px;
+    
 }
 
 .label {
@@ -35,6 +56,7 @@
     -fx-font-family: "Work Sans", sans-serif;
     -fx-font-weight: 700;
     -fx-font-style: normal;
+    -fx-font-size: 20px;
 }
 
 .button-text {
