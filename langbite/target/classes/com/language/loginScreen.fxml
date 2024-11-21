@@ -43,7 +43,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HomeController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="358.0" prefWidth="403.0" VBox.vgrow="ALWAYS">
       <children>
@@ -52,7 +52,7 @@
                   <Image url="https://github.com/gracen-greenburg/LangBiteFrontEnd/blob/47d130b7a2af042b283d39b19c54840c748752b2/langbite/src/main/resources/com/language/images/wavingGator.png" />
                </image>
             </ImageView>
-            <Button layoutX="205.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" stylesheets="@styles.css" text="Login" AnchorPane.rightAnchor="235.0">
+            <Button fx:id="loginButton" layoutX="205.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="25.0" prefWidth="200.0" stylesheets="@styles.css" text="Login" AnchorPane.rightAnchor="235.0">
                <font>
                   <Font name="Serif Regular" size="12.0" />
                </font>
@@ -63,9 +63,9 @@
                   <Blend />
                </effect>
             </Button>
-            <TextField layoutX="205.0" layoutY="268.0" prefHeight="25.0" prefWidth="200.0" promptText="username" styleClass="text_field" stylesheets="@styles.css" />
-            <TextField layoutX="204.0" layoutY="306.0" prefHeight="25.0" prefWidth="200.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
-            <Label layoutX="205.0" layoutY="243.0" styleClass="prompt-text" stylesheets="@styles.css" text="Login">
+            <TextField fx:id="username" layoutX="205.0" layoutY="268.0" prefHeight="25.0" prefWidth="200.0" promptText="username" styleClass="text_field" stylesheets="@styles.css" />
+            <TextField fx:id="password" layoutX="204.0" layoutY="306.0" prefHeight="25.0" prefWidth="200.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
+            <Label fx:id="txt_login" layoutX="205.0" layoutY="243.0" styleClass="prompt-text" stylesheets="@styles.css" text="Login">
                <font>
                   <Font size="15.0" />
                </font>
