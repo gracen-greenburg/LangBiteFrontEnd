@@ -5,15 +5,17 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-    <Button alignment="TOP_CENTER" layoutX="196.0" layoutY="339.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Sign up" />
-      <TextField layoutX="156.0" layoutY="179.0" promptText="last name" styleClass="text_field" stylesheets="@styles.css" />
-      <TextField layoutX="156.0" layoutY="128.0" promptText="first name" styleClass="text_field" stylesheets="@styles.css" />
-      <TextField layoutX="156.0" layoutY="229.0" promptText="email" styleClass="text_field" stylesheets="@styles.css" />
-      <Label layoutX="256.0" layoutY="88.0" text="Sign Up" />
-      <TextField layoutX="156.0" layoutY="278.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
-      <Label layoutX="155.0" styleClass="title" stylesheets="@styles.css" text="LangBite" />
-   </children>
-</AnchorPane>
+            <children>
+                <Button alignment="TOP_CENTER" layoutX="196.0" layoutY="339.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Sign up" />
+                <TextField fx:id="txt_lastName" layoutX="156.0" layoutY="179.0" prefHeight="25.0" prefWidth="275.0" promptText="last name" styleClass="text_field" stylesheets="@styles.css" />
+                <TextField fx:id="txt_firstName" layoutX="156.0" layoutY="128.0" prefHeight="17.0" prefWidth="275.0" promptText="first name" styleClass="text_field" stylesheets="@styles.css" />
+                <TextField fx:id="txt_email" layoutX="156.0" layoutY="229.0" prefHeight="25.0" prefWidth="275.0" promptText="email" styleClass="text_field" stylesheets="@styles.css" />
+                <Label layoutX="256.0" layoutY="88.0" text="Sign Up" />
+                <TextField fx:id="txt_password" layoutX="156.0" layoutY="278.0" prefHeight="25.0" prefWidth="275.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
+                <Label layoutX="155.0" styleClass="title" stylesheets="@styles.css" text="LangBite" />
+            </children>
+            <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+        </AnchorPane>
