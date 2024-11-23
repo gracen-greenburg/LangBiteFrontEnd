@@ -11,9 +11,9 @@
 
 <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="15" style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <!-- Header Section -->
-    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 10;">
-        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-            <Image url="@images/back_arrow.png" />
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 10;">
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.alignment="LEFT">
+            <Image url="@images/backarrow.png" />
         </ImageView>
         <Label style="-fx-font-size: 53px; -fx-text-fill: white;" styleClass="title" text="Flashcards" />
     </HBox>
