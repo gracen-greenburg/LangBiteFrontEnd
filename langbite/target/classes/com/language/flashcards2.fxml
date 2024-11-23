@@ -25,7 +25,7 @@
 
     <!-- Flashcard Section -->
     <StackPane alignment="CENTER" prefHeight="198.0" prefWidth="408.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 15;">
-        <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Bread" />
+        <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Pain" />
         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="BOTTOM_RIGHT">
             <Image url="@images/refresh1.png" />
         </ImageView>
