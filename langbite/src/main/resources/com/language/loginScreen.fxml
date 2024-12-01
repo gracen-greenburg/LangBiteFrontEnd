@@ -1,77 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
-  All rights reserved. Use is subject to license terms.
-
-  This file is available and licensed under the following license:
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions
-  are met:
-
-  - Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-  - Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the distribution.
-  - Neither the name of Oracle Corporation nor the names of its
-    contributors may be used to endorse or promote products derived
-    from this software without specific prior written permission.
-
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
-
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HomeController">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="358.0" prefWidth="403.0" VBox.vgrow="ALWAYS">
-      <children>
-            <ImageView fitHeight="164.0" fitWidth="143.0" layoutX="233.0" layoutY="79.0">
-               <image>
-                  <Image url="https://github.com/gracen-greenburg/LangBiteFrontEnd/blob/47d130b7a2af042b283d39b19c54840c748752b2/langbite/src/main/resources/com/language/images/wavingGator.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="loginButton" layoutX="205.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="25.0" prefWidth="200.0" stylesheets="@styles.css" text="Login" AnchorPane.rightAnchor="235.0">
-               <font>
-                  <Font name="Serif Regular" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-               <effect>
-                  <Blend />
-               </effect>
-            </Button>
-            <TextField fx:id="username" layoutX="205.0" layoutY="268.0" prefHeight="25.0" prefWidth="200.0" promptText="username" styleClass="text_field" stylesheets="@styles.css" />
-            <TextField fx:id="password" layoutX="204.0" layoutY="306.0" prefHeight="25.0" prefWidth="200.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
-            <Label fx:id="txt_login" layoutX="205.0" layoutY="243.0" styleClass="prompt-text" stylesheets="@styles.css" text="Login">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="175.0" layoutY="14.0" styleClass="title" stylesheets="@styles.css" text="LangBite" />
-      </children>
-    </AnchorPane>
-  </children>
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HomeController">
+    <Label style="-fx-font-size: 75px; -fx-padding: 0 0 100 0;" styleClass="title" stylesheets="@styles.css" text="LangBite">
+      <font>
+         <Font size="42.0" />
+      </font></Label>
+    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/wavingGator.png" />
+    </ImageView>
+    <HBox alignment="CENTER_LEFT" prefWidth="250.0">
+    <Label style="-fx-font-size: 20px; -fx-padding: 0 0 0 75;" stylesheets="@styles.css" text="Login" />
+    </HBox>
+    <TextField fx:id="usernameField" maxWidth="-Infinity" prefWidth="250.0" promptText="username" styleClass="text_field" stylesheets="@styles.css" />
+    <TextField fx:id="passwordField" maxWidth="-Infinity" prefWidth="250.0" promptText="password" styleClass="text_field" stylesheets="@styles.css" />
+
+    <HBox alignment="CENTER_RIGHT" prefWidth="250.0">
+    <Button style="-fx-padding: 0 75 0 0;" styleClass="button-text" stylesheets="@styles.css" text="Forgot Password" />
+    </HBox>
+    <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Login">
+      <cursor>
+         <Cursor fx:constant="OPEN_HAND" />
+      </cursor></Button>
+    <HBox alignment="CENTER" spacing="5">
+        <Label style="-fx-font-size: 15px; -fx-padding: 0 0 0 75;" styleClass="normal_black_text" stylesheets="@styles.css" text="Don't have an account?" />
+        <Button styleClass="button-text" stylesheets="@styles.css" text="Sign up" />
+    </HBox>
 </VBox>
