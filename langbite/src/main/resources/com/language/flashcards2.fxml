@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="15" style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 10;">
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/backarrow.png" />
+        </ImageView>
+        <Region HBox.hgrow="ALWAYS" />
+        <Label style="-fx-font-size: 53px; -fx-text-fill: white;" styleClass="title" text="Flashcards" />
+        <Region HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <!-- Progress Section -->
+    <Label styleClass="label" text="1/20" />
+
+    <!-- Flashcard Section -->
+    <StackPane alignment="CENTER" prefHeight="198.0" prefWidth="408.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 15;">
+        <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Pain" />
+        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="BOTTOM_RIGHT">
+            <Image url="@images/refresh1.png" />
+        </ImageView>
+    </StackPane>
+
+    <!-- Shuffle Button -->
+    <Button styleClass="button" text="Shuffle" />
+
+    <!-- Navigation Buttons -->
+    <HBox alignment="CENTER" spacing="50" style="-fx-padding: 0 0 30 0;">
+        <Button styleClass="button" text="Back" />
+        <Button styleClass="button" text="Next" />
+    </HBox>
+
+    <!-- Footer Navigation Hub -->
+    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="400.0" spacing="40" style="-fx-background-color: #649a38; -fx-padding: 3; -fx-border-radius: 0;" VBox.vgrow="ALWAYS">
+        
+        <VBox alignment="CENTER" spacing="5">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/store_icon.png" />
+            </ImageView>
+            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Store" />
+        </VBox>
+    
+        <VBox alignment="CENTER" spacing="5">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/settings_icon.png" />
+            </ImageView>
+            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Settings" />
+        </VBox>
+      
+        <VBox alignment="CENTER" spacing="5">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/home_icon.png" />
+            </ImageView>
+            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Home" />
+        </VBox>
+ 
+        <VBox alignment="CENTER" spacing="5">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/favorites_icon.png" />
+            </ImageView>
+            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Favorites" />
+        </VBox>
+   
+        <VBox alignment="CENTER" spacing="5">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/profile_icon.png" />
+            </ImageView>
+            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Profile" />
+        </VBox>
+    </HBox>
+</VBox>
