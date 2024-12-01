@@ -41,7 +41,7 @@ public class LanguageList {
         return new LanguageModule(currentUser);
     }
 
-    private void addLanguage() {
+    public void addLanguage() {
         JSONArray languages = (JSONArray) currentUser.get("languages");
         if (languages == null) {
             languages = new JSONArray();

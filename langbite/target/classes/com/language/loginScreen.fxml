@@ -27,7 +27,7 @@
     <HBox alignment="CENTER" prefWidth="250.0">
     <Button style="-fx-padding: 0 0 0 140; -fx-font-size: 15px;" styleClass="button-text" stylesheets="@styles.css" text="Forgot Password" />
     </HBox>
-    <Button maxWidth="-Infinity" onAction="#switchToHomePage" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Login">
+    <Button maxWidth="-Infinity" onAction="#handleLogin" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Login">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>

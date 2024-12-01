@@ -38,7 +38,7 @@
     </HBox>
     <TextField fx:id="usernameField" maxWidth="-Infinity" prefWidth="250.0" promptText="********" styleClass="text_field" stylesheets="@styles.css" />
 
-    <Button maxWidth="-Infinity" onAction="#switchToLanguageSelect" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Sign Up">
+    <Button maxWidth="-Infinity" onAction="#handleSignUp" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Sign Up">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>
