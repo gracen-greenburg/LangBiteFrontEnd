@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
 
-public class HomeController  {
+public class LoginController  {
     @FXML private TextField usernameField;
     @FXML private TextField passwordField;
 
@@ -33,6 +33,10 @@ public class HomeController  {
     @FXML
     private void switchToSignUp() throws IOException {
         App.setRoot("signUpScreen");
+    }
+
+    @FXML private void switchToHomePage() throws IOException {
+        App.setRoot("homepage"); // to switch to user that already has data
     }
 
     @FXML
