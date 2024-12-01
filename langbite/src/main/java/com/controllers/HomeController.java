@@ -7,8 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
 
 public class HomeController  {
-    @FXML TextField usernameField;
-    @FXML TextField passwordField;
+    @FXML private TextField usernameField;
+    @FXML private TextField passwordField;
 
     @FXML private void handleLogin() {
         String username = usernameField.getText();
