@@ -6,10 +6,10 @@ import org.json.simple.JSONObject;
 import com.language.App;
 import com.model.DataLoader;
 import com.model.DataWriter;
+import com.model.SessionManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 
 public class SignUpController {
     @FXML private TextField txt_firstName;
@@ -61,6 +61,9 @@ public class SignUpController {
 
         // Save updated user data
         DataWriter.saveUsers(users);
+
+        // Set new user as the current user
+        SessionManager.setCurrentUser(newUser);
 
         // Navigate to language selection screen
         showAlert(Alert.AlertType.INFORMATION, "Sign Up Successful", "Welcome, " + firstName + "!");

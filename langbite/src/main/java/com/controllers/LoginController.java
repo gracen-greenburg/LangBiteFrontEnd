@@ -9,6 +9,8 @@ import com.model.DataLoader;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
+import com.model.SessionManager;
+
 
 public class LoginController  {
     @FXML private TextField usernameField;
@@ -29,9 +31,14 @@ public class LoginController  {
         // Validate username and password
         JSONObject user = findUserByUsername(users, username);
         if (user != null && user.get("password").equals(password)) {
+            // Set current user
+            SessionManager.setCurrentUser(user);
+
+            // Show sucess and go to home page
             showAlert(Alert.AlertType.INFORMATION, "Login Successful", "Welcome, " + user.get("first_name") + "!");
-            switchToHomePage(); // Navigate to the home page
+            switchToHomePage(); 
         } else {
+            // Show error
             showAlert(Alert.AlertType.ERROR, "Login Failed", "Incorrect username or password");
         }
 
