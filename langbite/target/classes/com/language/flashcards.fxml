@@ -5,16 +5,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.Region?>
 
-<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="15" style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" spacing="15" style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.FlashcardsController">
     <!-- Header Section -->
     <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 10;">
         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
             <Image url="@images/backarrow.png" />
         </ImageView>
+        <Button prefHeight="100" prefWidth="100" onAction="#goHomePage" styleClass="invisible_button" stylesheets="@styles.css" text="Back" style="-fx-cursor: hand;"/> 
         <Region HBox.hgrow="ALWAYS" />
         <Label style="-fx-font-size: 53px; -fx-text-fill: white;" styleClass="title" text="Flashcards" />
         <Region HBox.hgrow="ALWAYS" />
@@ -25,19 +26,20 @@
 
     <!-- Flashcard Section -->
     <StackPane alignment="CENTER" prefHeight="198.0" prefWidth="408.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 15;">
-        <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Bread" />
+        <Label fx:id="currentWord" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Bread" />
         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="BOTTOM_RIGHT">
             <Image url="@images/refresh1.png" />
         </ImageView>
+      <Button fx:id="flipCardButton" mnemonicParsing="false" onAction="#handleToggle" prefHeight="400.0" prefWidth="408.0" styleClass="invisible_button" stylesheets="@styles.css" text="Button" />
     </StackPane>
 
     <!-- Shuffle Button -->
-    <Button styleClass="button" text="Shuffle" />
+    <Button styleClass="button" text="Shuffle" onAction="#handleShuffle" style="-fx-cursor: hand;"/>
 
     <!-- Navigation Buttons -->
     <HBox alignment="CENTER" spacing="50" style="-fx-padding: 0 0 30 0;">
-        <Button styleClass="button" text="Back" />
-        <Button styleClass="button" text="Next" />
+        <Button styleClass="button" text="Back" onAction="#handleBack" style="-fx-cursor: hand;" />
+        <Button styleClass="button" text="Next" onAction="#handleNext" style="-fx-cursor: hand;" />
     </HBox>
 
     <!-- Footer Navigation Hub -->
