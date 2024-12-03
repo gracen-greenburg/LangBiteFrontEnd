@@ -70,7 +70,7 @@
             </ImageView>
             <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Favorites" />
         </VBox>
-   
+    
         <VBox alignment="CENTER" spacing="5">
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@images/profile_icon.png" />

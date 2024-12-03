@@ -1,17 +1,1 @@
-{
-  "users": [
-    {
-      "password": "loumur123",
-      "last_name": "mur",
-      "progress": {
-        "grammarRulesCompletionPercentage": 0,
-        "connectorWordsCompletionPercentage": 0,
-        "mostCommonWordsCompletionPercentage": 0
-      },
-      "id": "d4d549ce-83e0-482b-ae25-c90b141d3e38",
-      "first_name": "lou",
-      "email": "lou@mur.com",
-      "username": "loumur"
-    }
-  ]
-}
+{"users":[{"password":"loumur123","last_name":"mur","progress":{"grammarRulesCompletionPercentage":0,"connectorWordsCompletionPercentage":0,"mostCommonWordsCompletionPercentage":0},"id":"d4d549ce-83e0-482b-ae25-c90b141d3e38","first_name":"lou","email":"lou@mur.com","username":"loumur"},{"password":"gracenpass","last_name":"Greenburg","progress":{"grammarRulesCompletionPercentage":0,"connectorWordsCompletionPercentage":0,"mostCommonWordsCompletionPercentage":0},"id":"9df1c32e-4c39-4a17-8a55-21738f0f9b3b","first_name":"Gracen","email":"ggreenburg@email.com","username":"ggreenburg"}]}

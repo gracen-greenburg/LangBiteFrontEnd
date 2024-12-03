@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="208.0" layoutY="21.0" prefHeight="74.0" prefWidth="179.0" stylesheets="@styles.css" text="Grammar plural-formation" />
-      <Label layoutX="213.0" layoutY="165.0" prefHeight="83.0" prefWidth="169.0" stylesheets="@styles.css" text=" Type the plural form of" />
-      <TextArea layoutX="200.0" layoutY="221.0" prefHeight="55.0" prefWidth="200.0" />
-      <Button layoutX="200.0" layoutY="304.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="200.0" stylesheets="@styles.css" text="Check" />
-   </children>
-</AnchorPane>
+<VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.GrammarQuestionController">
+   
+    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/grammarplural.png" />
+    </ImageView>
+    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
+            <Image url="@images/confusedgator.png" />
+    </ImageView>
+   <Label style="-fx-font-size: 20px; -fx-padding: 30 0 0 0" stylesheets="@styles.css" text="Question Here" />
+   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+      <children>
+         <TextField fx:id="answerField" maxWidth="-Infinity" prefWidth="250.0" style="-fx-padding: 30 0 0 0" styleClass="text_field" stylesheets="@styles.css" />
+         <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="CHECK">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+         </Button>
+      </children>
+   </VBox>
+    
+</VBox>

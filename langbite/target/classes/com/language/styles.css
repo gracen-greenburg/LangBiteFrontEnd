@@ -6,6 +6,10 @@
     -fx-font-family: "Barriecito", system-ui;
 }
 
+.scene-background {
+    -fx-background-color: white;
+}
+
 .title {
     -fx-font-size: 50px;
     -fx-font-family: "Barriecito", system-ui;
