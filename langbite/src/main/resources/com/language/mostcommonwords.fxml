@@ -9,11 +9,8 @@
 
 <VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.GrammarQuestionController">
    
-    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="false" style="-fx-cursor: hand;">
-            <Image url="@images/connectorWords.png" />
-    </ImageView>
-    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
-            <Image url="@images/confusedgator.png" />
+    <ImageView fitHeight="306.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/mostcommonwords.png" />
     </ImageView>
 
     <VBox alignment="CENTER" spacing="30">

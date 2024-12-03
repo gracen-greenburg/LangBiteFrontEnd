@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.GrammarQuestionController">
+   
+    <ImageView fitHeight="306.0" fitWidth="312.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/correctpluralnouns.png" />
+    </ImageView>
+
+    <VBox alignment="CENTER" spacing="30">
+   <Label fx:id="questionLabel" style="-fx-font-size: 20px; -fx-padding: 30 0 30 0" styleClass="normal_black_text" stylesheets="@styles.css" text="prompt" wrapText="true" />
+   </VBox>
+
+   <VBox alignment="CENTER" spacing="10">
+   <HBox alignment="CENTER" spacing="10" />
+   <HBox alignment="CENTER" spacing="10" />
+    </VBox>
+<Button prefHeight="51.0" prefWidth="228.0" style="-fx-cursor: hand; -fx-padding: 10 0 10 0" styleClass="button" stylesheets="@styles.css" text="Next" />
+</VBox>
