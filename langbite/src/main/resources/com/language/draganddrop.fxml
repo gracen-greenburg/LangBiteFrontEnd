@@ -19,13 +19,13 @@
     <!-- Instructions Section -->
     <Label text="Drag the English words to their French translation:" style="-fx-font-size: 14px; -fx-text-fill: #578631;" />
 
-    <!-- Drag and Drop Game Section -->
-    <VBox spacing="15" style="-fx-padding: 10; -fx-border-color: #578631; -fx-border-width: 2;">
-        <VBox fx:id="wordsVBox" alignment="CENTER" spacing="10">
+    <VBox fx:id="wordsVBox" alignment="CENTER" spacing="10">
             <Label text="Words to Match" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
             <!--words added in controller-->
-        </VBox>
+     </VBox>
 
+    <!-- Drag and Drop Game Section -->
+    <HBox spacing="15" style="-fx-padding: 10; -fx-border-color: #578631; -fx-border-width: 2;">
         <!-- Categories Section -->
         <VBox fx:id="englishWordsVBox" alignment="CENTER" spacing="15">
             <Label text="English Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
@@ -34,6 +34,11 @@
         <VBox fx:id="frenchWordsVBox" alignment="CENTER" spacing="15">
             <Label text="French Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
         </VBox>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="shuffleButton"  maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="SHUFFLE" onAction="#shuffleWords"/>
+        <Button fx:id="resetButton"  maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="RESET" onAction="#resetGame"/>
     </VBox>
 
     <!-- Footer Section -->

@@ -13,7 +13,6 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
-import javafx.scene.layout.Pane;
 
 public class DragAndDropController {
 
@@ -29,21 +28,20 @@ public class DragAndDropController {
         wordsList = DataLoader.loadWords();
         Collections.shuffle(wordsList);
         populateWordLabels();
+        
+        shuffleButton.setOnAction(event -> shuffleWords());
 
-        // shuffle button logic
-        //shuffleButton.setOnAction(event -> shuffleWords());
-
-        // reset button logic
         resetButton.setOnAction(event -> resetGame());
     }
 
 
-    // private void shuffleWords() {
-    //     // Randomizes the order of the draggable words in the list
-    //     System.out.println("Shuffle words - To be implemented");
-    // }
+    @FXML private void shuffleWords() {
+        // Randomizes the order of the draggable words in the list
+        Collections.shuffle(wordsList);
+        populateWordLabels();
+    }
 
-    private void resetGame() {
+    @FXML private void resetGame() {
         for (Word word: wordsList) {
             word.setMastered(false);
             word.setCorrectCount(0);
@@ -56,14 +54,30 @@ public class DragAndDropController {
         englishWordsVBox.getChildren().clear();
         frenchWordsVBox.getChildren().clear();
 
-        for (Word word: wordsList) {
+        // Load 5 words at a time
+        int wordsToLoad = Math.min(5, wordsList.size());
+        ArrayList<Word> selectedWords = new ArrayList<>(wordsList.subList(0, wordsToLoad));
+
+        //Shuffle the words
+        Collections.shuffle(selectedWords);
+
+        ArrayList<String> frenchWords = new ArrayList<>();
+        for (Word word : selectedWords) {
+            frenchWords.add(word.getFrench());
+        }
+        Collections.shuffle(frenchWords);
+
+        for (int i = 0; i < wordsToLoad; i++) {
+            Word word = selectedWords.get(i);
+            String frenchWord = frenchWords.get(i);
+
             Label englishLabel = createDraggableLabel(word.getEnglish());
-            Label frenchLabel = createTargetLabel(word.getFrench());
+            Label frenchLabel = createTargetLabel(frenchWord);
 
             englishWordsVBox.getChildren().add(englishLabel);
             frenchWordsVBox.getChildren().add(frenchLabel);
 
-            setDragEvents(englishLabel, frenchLabel, word.getEnglish(), word.getFrench());
+            setDragEvents(englishLabel, frenchLabel, word.getEnglish(), frenchWord);
         }
     }
 
@@ -86,12 +100,35 @@ public class DragAndDropController {
     private Label createTargetLabel(String text) {
         Label label = new Label("Drop here: " + text);
         label.setStyle("-fx-background-color: #f5f5f5; -fx-text-fill: #808080; -fx-padding: 5; -fx-font-size: 14px;");
+        
+        label.setOnDragDropped(event -> {
+            Dragboard db = event.getDragboard();
+            boolean success = false;
+    
+            if (db.hasString()) {
+                // Check if the dragged word matches the target
+                String draggedWord = db.getString();
+                if (draggedWord.equals(text)) {
+                    label.setText("Correct! " + draggedWord + " = " + text);
+                    label.setStyle("-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;");
+                    success = true;
+                } else {
+                    label.setText("Try Again");
+                    label.setStyle("-fx-background-color: #ff6666; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;");
+                }
+            }
+    
+            event.setDropCompleted(success);
+            event.consume();
+        });
+        
+        
         return label;
     }
 
-    private void setDragEvents(Label draggableLabel, Label targetLabel, String english, String french) {
+    private void setDragEvents(Label draggableLabel, Label targetLabel, String english, String correctFrench) {
         targetLabel.setOnDragOver(event -> { // when being dragged it can be moved
-            if (event.getGestureSource() == draggableLabel) {
+            if (event.getGestureSource() != targetLabel && event.getDragboard().hasString()) {
                 event.acceptTransferModes(TransferMode.MOVE);
             }
             event.consume();
@@ -99,9 +136,14 @@ public class DragAndDropController {
 
         targetLabel.setOnDragDropped(event -> { // when the drag is over, it is either right or wrong
             Dragboard db = event.getDragboard(); 
+            boolean success = false;
+
             if (db.hasString() && db.getString().equals(english)) {
-                targetLabel.setText("Correct! " + english + " = " + french);
+                targetLabel.setText("Correct! " + english + " = " + correctFrench);
                 draggableLabel.setDisable(true);
+                draggableLabel.setStyle("-fx-opacity: 0.5;");
+                targetLabel.setStyle("-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;");
+                success = true;
             } else {
                 targetLabel.setText("Try Again"); // prompts the user to try again
             }
