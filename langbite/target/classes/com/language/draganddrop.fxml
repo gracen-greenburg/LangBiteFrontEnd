@@ -17,46 +17,22 @@
     </HBox>
 
     <!-- Instructions Section -->
-    <Label text="Drag the words to their correct categories:" style="-fx-font-size: 14px; -fx-text-fill: #578631;" />
+    <Label text="Drag the English words to their French translation:" style="-fx-font-size: 14px; -fx-text-fill: #578631;" />
 
     <!-- Drag and Drop Game Section -->
     <VBox spacing="15" style="-fx-padding: 10; -fx-border-color: #578631; -fx-border-width: 2;">
-        <VBox alignment="CENTER" spacing="10">
+        <VBox fx:id="wordsVBox" alignment="CENTER" spacing="10">
             <Label text="Words to Match" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
-            <HBox alignment="CENTER" spacing="10">
-                <Label text="Pomme" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="pommeLabel" />
-                <Label text="Orange" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="orangeLabel" />
-                <Label text="Bleu" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="bleuLabel" />
-            </HBox>
-            <HBox alignment="CENTER" spacing="10">
-                <Label text="Rouge" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="rougeLabel" />
-                <Label text="Foot" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="footLabel" />
-                <Label text="Tennis" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;" fx:id="tennisLabel" />
-            </HBox>
+            <!--words added in controller-->
         </VBox>
 
         <!-- Categories Section -->
-        <VBox alignment="CENTER" spacing="15">
-            <VBox spacing="10" style="-fx-padding: 10;">
-                <Label text="Fruits" style="-fx-font-size: 16px; -fx-background-color: #578631; -fx-text-fill: white; -fx-padding: 10;" />
-                <Pane fx:id="fruitsPane" prefHeight="200.0" prefWidth="350.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-background-color: #f5f5f5;">
-                    <Label text="Drop Fruits Here" style="-fx-text-fill: #808080;" />
-                </Pane>
-            </VBox>
+        <VBox fx:id="englishWordsVBox" alignment="CENTER" spacing="15">
+            <Label text="English Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
+        </VBox>
 
-            <VBox spacing="10" style="-fx-padding: 10;">
-                <Label text="Colors" style="-fx-font-size: 16px; -fx-background-color: #578631; -fx-text-fill: white; -fx-padding: 10;" />
-                <Pane fx:id="colorsPane" prefHeight="200.0" prefWidth="350.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-background-color: #f5f5f5;">
-                    <Label text="Drop Colors Here" style="-fx-text-fill: #808080;" />
-                </Pane>
-            </VBox>
-
-            <VBox spacing="10" style="-fx-padding: 10;">
-                <Label text="Sports" style="-fx-font-size: 16px; -fx-background-color: #578631; -fx-text-fill: white; -fx-padding: 10;" />
-                <Pane fx:id="sportsPane" prefHeight="200.0" prefWidth="350.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-background-color: #f5f5f5;">
-                    <Label text="Drop Sports Here" style="-fx-text-fill: #808080;" />
-                </Pane>
-            </VBox>
+        <VBox fx:id="frenchWordsVBox" alignment="CENTER" spacing="15">
+            <Label text="French Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
         </VBox>
     </VBox>
 
