@@ -16,11 +16,13 @@
     <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
             <Image url="@images/confusedgator.png" />
     </ImageView>
-   <Label style="-fx-font-size: 20px; -fx-padding: 30 0 0 0" stylesheets="@styles.css" text="Question Here" />
+    <VBox alignment="CENTER" spacing="30">
+   <Label fx:id="questionLabel" wrapText="true" style="-fx-font-size: 20px; -fx-padding: 30 0 0 0" stylesheets="@styles.css" text="This is a Question" styleClass="normal_black_text"/>
+   </VBox>
    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
       <children>
          <TextField fx:id="answerField" maxWidth="-Infinity" prefWidth="250.0" style="-fx-padding: 30 0 0 0" styleClass="text_field" stylesheets="@styles.css" />
-         <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="CHECK">
+         <Button fx:id="submitButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="CHECK">
             <cursor>
                <Cursor fx:constant="OPEN_HAND" />
             </cursor>

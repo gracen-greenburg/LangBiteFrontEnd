@@ -18,8 +18,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("loginScreen"), 400,800);
-        stage.setScene(scene, );
+        scene = new Scene(loadFXML("grammerpluralformation"), 400,800);
+        stage.setScene(scene);
         stage.show();
     }
 
