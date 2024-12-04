@@ -24,7 +24,7 @@
       </font>
    </Label>
    <VBox alignment="CENTER" prefWidth="250.0" spacing="25" style="-fx-padding: 20;">
-      <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Continue">
+      <Button maxWidth="-Infinity" onAction="#continueToModule" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Continue">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>

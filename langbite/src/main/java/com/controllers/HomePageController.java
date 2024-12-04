@@ -33,6 +33,7 @@ public class HomePageController {
     @FXML private void continueToModule() throws IOException {
         // Get the current user from SessionManager
         JSONObject currentUser = SessionManager.getCurrentUser();
+        System.out.println("Current User: " + currentUser); // Debugging output
         if (currentUser == null) {
             // Show an error alert if no user is logged in
             showAlert(Alert.AlertType.ERROR, "Error", "No user is logged in.");
@@ -41,17 +42,27 @@ public class HomePageController {
 
         // Get progress data
         JSONObject progress = (JSONObject) currentUser.get("progress");
+        System.out.println("Progress Data: " + progress); // Debugging output
+
         if (progress == null) {
             // Show an error  if progress is missing
-            showAlert(Alert.AlertType.ERROR, "Error", "User progress data is missing.");
+            showAlert(Alert.AlertType.INFORMATION, "Welcome!", "Starting with the most common words module.");
+            App.setRoot("mostcommonwords");
             return;
         }
 
-        int masteredMostCommonWords = ((Long) progress.getOrDefault("mostCommonWordsCompletionPercentage", 0L)).intValue();
-        if (masteredMostCommonWords == 100) {
-            App.setRoot("ConnectorWords");
+        // Get the completion percentage for most common words
+        long mostCommonWordsCompletion = (long) progress.getOrDefault("mostCommonWordsCompletionPercentage", 0L);
+        System.out.println("Most Common Words Completion Percentage: " + mostCommonWordsCompletion); // Debugging output
+
+
+        // Check progress and navigate to the appropriate module
+        if (mostCommonWordsCompletion >= 100) {
+            System.out.println("Navigating to ConnectorWords module"); // Debugging output
+            App.setRoot("connectorwords");
         } else {
-            App.setRoot("HundredMostCommonWords");
+            System.out.println("Navigating to HundredMostCommonWords module"); // Debugging output
+            App.setRoot("mostcommonwords");
         }
 
     }
