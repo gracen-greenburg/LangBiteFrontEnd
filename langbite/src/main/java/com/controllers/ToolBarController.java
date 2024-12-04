@@ -1,4 +1,4 @@
-package your.package;
+package com.controllers;
 
 import javafx.fxml.FXML;
 

@@ -1,113 +1,135 @@
 package com.controllers;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-
-import org.json.simple.JSONObject;
+import java.util.List;
 
 import com.model.DataLoader;
 import com.model.Word;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.event.ActionEvent;
 
 public class ConnectorWordsController {
 
-    @FXML private Label lblFrenchWord;
-    @FXML private Button btnOption1;
-    @FXML private Button btnOption2;
-    @FXML private Button btnOption3;
-    @FXML private Button btnOption4;
+    @FXML private VBox questionPane;
+    @FXML private Label questionLabel;
+    @FXML private VBox answerChoicesBox;
+    @FXML private Button nextButton;
 
-    private ArrayList<Word> words;
+    private List<Word> connectorWords;
+    private int currentWordIndex = 0;
     private Word currentWord;
 
     @FXML
-    public void initialize() {
-        // Load words of type "ConnectorWords"
-        words = DataLoader.loadWords();
-        words.removeIf(word -> !word.getType().equals("ConnectorWords"));
+    private void initialize() {
+        try {
+            // Load all words
+            List<Word> allWords = DataLoader.loadWords();
+            connectorWords = new ArrayList<>();
 
-        // Shuffle the words for randomness
-        Collections.shuffle(words);
+            // Filter words by type "ConnectorWords"
+            for (Word word : allWords) {
+                if ("ConnectorWords".equals(word.getType())) {
+                    connectorWords.add(word);
+                }
+            }
 
-        // Display the first word
-        displayNextWord();
+            // Shuffle the words
+            Collections.shuffle(connectorWords);
+
+            if (!connectorWords.isEmpty()) {
+                loadQuestion(currentWordIndex);
+            } else {
+                questionLabel.setText("No connector words found.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            questionLabel.setText("Failed to load data.");
+        }
     }
 
-    private void displayNextWord() {
-        if (words.isEmpty()) {
-            showAlert(Alert.AlertType.INFORMATION, "Congratulations!", "You have mastered all Connector Words!");
-            return;
+    private void loadQuestion(int index) {
+        if (index < connectorWords.size()) {
+            currentWord = connectorWords.get(index);
+            questionLabel.setText("What is the English word for: " + currentWord.getFrench());
+            nextButton.setDisable(true);
+            loadAnswerChoices(currentWord);
+        } else {
+            questionLabel.setText("No more questions available.");
+            nextButton.setDisable(true);
         }
+    }
 
-        // Get the next word
-        currentWord = words.remove(0);
+    private void loadAnswerChoices(Word correctWord) {
+        answerChoicesBox.getChildren().clear();
 
-        // Set the French word in the label
-        lblFrenchWord.setText(currentWord.getFrench());
+        // Prepare a list of choices including the correct answer and 3 random wrong answers
+        List<Word> choices = new ArrayList<>();
+        choices.add(correctWord);
 
-        // Randomize options for the buttons
-        ArrayList<String> options = new ArrayList<>();
-        options.add(currentWord.getEnglish()); // Add correct answer
+        // Get 3 wrong answers
+        List<Word> shuffledWords = new ArrayList<>(connectorWords);
+        Collections.shuffle(shuffledWords);
 
-        // Add random incorrect options
-        for (Word word : words) {
-            if (options.size() >= 4) break;
-            if (!options.contains(word.getEnglish())) {
-                options.add(word.getEnglish());
+        for (Word word : shuffledWords) {
+            if (choices.size() >= 4) break;
+            if (!word.getEnglish().equals(correctWord.getEnglish())) {
+                choices.add(word);
             }
         }
 
-        // Shuffle the options
-        Collections.shuffle(options);
+        // Shuffle the choices
+        Collections.shuffle(choices);
 
-        // Assign options to buttons
-        btnOption1.setText(options.get(0));
-        btnOption2.setText(options.get(1));
-        btnOption3.setText(options.get(2));
-        btnOption4.setText(options.get(3));
+        for (Word choice : choices) {
+            Button answerButton = new Button(choice.getEnglish());
+            answerButton.getStyleClass().add("button");
+            answerButton.setOnAction(event -> handleAnswerSelection(answerButton, choice.getEnglish(), correctWord.getEnglish()));
+            answerChoicesBox.getChildren().add(answerButton);
+        }
     }
 
-    @FXML
-    private void handleOption1() {
-        checkAnswer(btnOption1.getText());
-    }
-
-    @FXML
-    private void handleOption2() {
-        checkAnswer(btnOption2.getText());
-    }
-
-    @FXML
-    private void handleOption3() {
-        checkAnswer(btnOption3.getText());
-    }
-
-    @FXML
-    private void handleOption4() {
-        checkAnswer(btnOption4.getText());
-    }
-
-    private void checkAnswer(String selectedOption) {
-        if (selectedOption.equals(currentWord.getEnglish())) {
-            showAlert(Alert.AlertType.INFORMATION, "Correct!", "Great job!");
+    private void handleAnswerSelection(Button selectedButton, String selected, String correctAnswer) {
+        if (selected.equals(correctAnswer)) {
+            selectedButton.setStyle("-fx-background-color: green");
+            questionLabel.setText("Correct!");
         } else {
-            showAlert(Alert.AlertType.ERROR, "Incorrect", "The correct answer was: " + currentWord.getEnglish());
+            selectedButton.setStyle("-fx-background-color: red");
+            questionLabel.setText("Incorrect. The correct answer is: " + correctAnswer);
         }
 
-        // Display the next word
-        displayNextWord();
+        for (javafx.scene.Node node : answerChoicesBox.getChildren()) {
+            if (node instanceof Button) {
+                Button button = (Button) node;
+                if (button != selectedButton) {
+                    button.setOpacity(0.5);
+                } else {
+                    button.setOpacity(1.0);
+                }
+            }
+        }
+
+        for (javafx.scene.Node node : answerChoicesBox.getChildren()) {
+            if (node instanceof Button) {
+                node.setDisable(true);
+            }
+        }
+
+        nextButton.setDisable(false);
     }
 
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    @FXML
+    private void handleNextQuestion(ActionEvent event) {
+        currentWordIndex++;
+        if (currentWordIndex < connectorWords.size()) {
+            loadQuestion(currentWordIndex);
+        } else {
+            questionLabel.setText("You have completed all the questions!");
+        }
     }
 }
