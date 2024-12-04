@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 
 
 public class FlashcardsController {
@@ -40,7 +41,7 @@ public class FlashcardsController {
     }
 
 
-    @FXML private void handleToggle() {
+    @FXML private void handleToggle(MouseEvent event) {
         showEnglishFirst = !showEnglishFirst; // switches it to french
         loadWord(currentWordIndex, showEnglishFirst);
     }
@@ -82,7 +83,7 @@ public class FlashcardsController {
         alert.showAndWait();
     }
 
-    @FXML private void goHomePage() {
+    @FXML private void goHomePage(MouseEvent event) {
         try {
             App.setRoot("homepage");
         } catch (Exception e) {
