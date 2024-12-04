@@ -34,6 +34,7 @@ public class HomePageController {
         // Get the current user from SessionManager
         JSONObject currentUser = SessionManager.getCurrentUser();
         System.out.println("Current User: " + currentUser); // Debugging output
+
         if (currentUser == null) {
             // Show an error alert if no user is logged in
             showAlert(Alert.AlertType.ERROR, "Error", "No user is logged in.");
@@ -52,12 +53,12 @@ public class HomePageController {
         }
 
         // Get the completion percentage for most common words
-        long mostCommonWordsCompletion = (long) progress.getOrDefault("mostCommonWordsCompletionPercentage", 0L);
+        Number mostCommonWordsCompletion = (Number) progress.getOrDefault("mostCommonWordsCompletionPercentage", 0);
         System.out.println("Most Common Words Completion Percentage: " + mostCommonWordsCompletion); // Debugging output
 
 
         // Check progress and navigate to the appropriate module
-        if (mostCommonWordsCompletion >= 100) {
+        if (mostCommonWordsCompletion.intValue() >= 100) {
             System.out.println("Navigating to ConnectorWords module"); // Debugging output
             App.setRoot("connectorwords");
         } else {

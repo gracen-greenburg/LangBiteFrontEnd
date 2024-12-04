@@ -51,9 +51,9 @@ public class SignUpController {
 
         // Add default progress
         JSONObject progress = new JSONObject();
-        progress.put("grammarRulesCompletionPercentage", 0);
-        progress.put("connectorWordsCompletionPercentage", 0);
-        progress.put("mostCommonWordsCompletionPercentage", 0);
+        progress.put("grammarRulesCompletionPercentage", 0L); 
+        progress.put("connectorWordsCompletionPercentage", 0L); 
+        progress.put("mostCommonWordsCompletionPercentage", 0L); 
         newUser.put("progress", progress);
 
         // Add new user to the list
