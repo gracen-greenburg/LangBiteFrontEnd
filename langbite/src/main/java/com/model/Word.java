@@ -5,7 +5,10 @@ package com.model;
  * @author LangBite Team
  */
 
- public class Word {
+import java.util.UUID;
+
+public class Word {
+    private String id;
     private String word;
     private String meaning;
     private String english;
@@ -19,6 +22,7 @@ package com.model;
     private String type;
 
     public Word(String english, String french, String gender, String image, boolean mastered, int correctCount, int attempts, String partOfSpeech, String type) {
+        this.id = UUID.randomUUID().toString();
         this.english = english;
         this.french = french;
         this.gender = gender;
@@ -30,6 +34,9 @@ package com.model;
         this.type = type;
     }
 
+    public String getId() {
+        return id;
+    }
     // Getter for the word
     public String getWord() {
         return word;

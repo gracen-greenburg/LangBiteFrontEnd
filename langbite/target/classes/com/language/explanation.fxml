@@ -1,0 +1,24 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.explanationController">
+   
+    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/grammarplural.png" />
+    </ImageView>
+         <Label fx:id="explanationField" wrapText="true" maxWidth="-Infinity"  style="-fx-font-size:25px; -fx-padding: 30 0 30 0" styleClass="normal_black_text" stylesheets="@styles.css"  text="This is an explaination"/>
+         
+         <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="PRACTICE" onAction="#handleNextButton">
+            <cursor>
+               <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+         </Button>
+    
+</VBox> -->

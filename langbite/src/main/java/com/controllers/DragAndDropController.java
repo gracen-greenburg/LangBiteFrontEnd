@@ -13,6 +13,8 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
+import javafx.animation.PauseTransition;
+import javafx.util.Duration;
 
 public class DragAndDropController {
 
@@ -146,6 +148,15 @@ public class DragAndDropController {
                 success = true;
             } else {
                 targetLabel.setText("Try Again"); // prompts the user to try again
+
+                // Delay to reset the label to original state
+                PauseTransition pause = new PauseTransition(Duration.seconds(2));
+                pause.setOnFinished(e -> {
+                    String originalText = "Drop here: " + targetLabel.getText().replace("Correct! ", "").trim();
+                    targetLabel.setText(originalText);
+                    targetLabel.setStyle("-fx-background-color: #f5f5f5; -fx-text-fill: #808080; -fx-padding: 5; -fx-font-size: 14px;");
+                });
+                pause.play();
             }
             event.setDropCompleted(true);
             event.consume();
