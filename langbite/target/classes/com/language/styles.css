@@ -59,3 +59,21 @@
     -fx-text-fill: black;
     -fx-font-size: 11px;
 }
+
+.hbox-toolbar {
+    -fx-background-color: #A4D65E;
+    -fx-padding: 10;
+    -fx-min-height: 60px;
+    -fx-spacing: 50;
+    -fx-alignment: center;
+}
+
+.button-toolbar {
+    -fx-background-color: transparent;
+}
+
+.image-toolbar {
+    -fx-fit-width: 50;
+    -fx-fit-height: 50;
+    -fx-preserve-ratio: true;
+}

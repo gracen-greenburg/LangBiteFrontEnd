@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ToolBarController"
+      styleClass="hbox-toolbar">
+    <Button styleClass="button-toolbar" onAction="#navigateToHome">
+        <graphic>
+            <ImageView styleClass="image-toolbar" image="@images/home.png" />
+        </graphic>
+    </Button>
+    <Button styleClass="button-toolbar" onAction="#navigateToProfile">
+        <graphic>
+            <ImageView styleClass="image-toolbar" image="@images/profile.png" />
+        </graphic>
+    </Button>
+</HBox>
