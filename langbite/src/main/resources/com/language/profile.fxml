@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ProfileController">
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+           <ImageView fx:id="backArrowImageView" fitHeight="28.0" fitWidth="80.0" onMouseClicked="#goHomePage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                   <Image url="@images/backarrow.png" />
+               </image>
+           </ImageView>
+          
+          <Label prefHeight="140.0" prefWidth="270.0" style="-fx-font-size: 60px; -fx-padding: 0 0 50 0;" styleClass="title" stylesheets="@styles.css" text="  Profile">
+            <font>
+               <Font size="42.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+    <ImageView fitHeight="200.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/profile.png" />
+    </ImageView>
+    <HBox alignment="CENTER" prefWidth="250.0">
+      <Button style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Username" />
+    </HBox>
+    
+    <HBox alignment="CENTER" prefWidth="250.0">
+    <Button style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Password" />
+    </HBox>
+    <HBox alignment="CENTER" spacing="5">
+      <children>
+         <Button style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Language" />
+      </children></HBox>
+   <HBox prefHeight="29.0" prefWidth="400.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="20.0" prefWidth="403.0" style="-fx-font-size: 20; -fx-padding: 0 20;" stylesheets="@styles.css" text="Stats" textAlignment="RIGHT" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label stylesheets="@styles.css" text="         French:      " />
+         <ProgressBar prefHeight="20.0" prefWidth="245.0" progress="0.0" />
+      </children>
+   </HBox>
+</VBox>
