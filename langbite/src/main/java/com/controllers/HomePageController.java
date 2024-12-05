@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.json.simple.JSONObject;
 
 import com.language.App;
-import com.model.DataLoader;
 import com.model.SessionManager;
 import com.narriation.Narriator;
 
@@ -54,16 +53,23 @@ public class HomePageController {
 
         // Get the completion percentage for most common words
         Number mostCommonWordsCompletion = (Number) progress.getOrDefault("mostCommonWordsCompletionPercentage", 0);
+        Number connectorWordsCompletion = (Number) progress.getOrDefault("connectorWordsCompletionPercentage", 0);
+        
         System.out.println("Most Common Words Completion Percentage: " + mostCommonWordsCompletion); // Debugging output
+        System.out.println("Connector Words Completion Percentage: " + connectorWordsCompletion); // Debugging output
+
 
 
         // Check progress and navigate to the appropriate module
         if (mostCommonWordsCompletion.intValue() >= 100) {
             System.out.println("Navigating to ConnectorWords module"); // Debugging output
             App.setRoot("connectorwords");
-        } else {
+        } else if (connectorWordsCompletion.intValue() < 100) {
             System.out.println("Navigating to HundredMostCommonWords module"); // Debugging output
             App.setRoot("mostcommonwords");
+        } else {
+            System.out.println("Navigating to Grammar and Explanation module");
+            App.setRoot("grammarAndExplanation");
         }
 
     }
