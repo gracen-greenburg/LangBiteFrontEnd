@@ -96,3 +96,36 @@
     -fx-background-color: #649a38;
     -fx-text-fill: white;
 }
+
+/* Matching Game */
+
+.drop-zone {
+    -fx-border-color: #578631;
+    -fx-border-width: 2;
+    -fx-background-color: #e9e9e9;
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+    -fx-min-width: 150px;
+    -fx-min-height: 50px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);
+}
+
+.drop-zone-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #808080;
+}
+
+.drop-zone:hover {
+    -fx-background-color: #d7f2c6;
+}
+
+#btnShuffle, #btnReset {
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);
+}
+
+#lblMatchStatus {
+    -fx-font-size: 14px;
+    -fx-text-fill: #578631;
+    -fx-font-weight: bold;
+}
