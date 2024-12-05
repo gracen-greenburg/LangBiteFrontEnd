@@ -79,3 +79,20 @@
     -fx-fit-height: 50;
     -fx-preserve-ratio: true;
 }
+
+/* Story Effects */
+.tile {
+    -fx-background-color: #d3d3d3;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.tile:hover {
+    -fx-background-color: #c5c5c5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);
+}
+
+.tile-active {
+    -fx-background-color: #649a38;
+    -fx-text-fill: white;
+}

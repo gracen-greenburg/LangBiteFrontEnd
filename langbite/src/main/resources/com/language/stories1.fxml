@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="15"
+      style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15;">
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true"
+                   style="-fx-cursor: hand; -fx-translate-x: -140;">
+            <Image url="@images/backarrow.png" />
+        </ImageView>
+
+        <Label text="Stories" style="-fx-font-size: 25px; -fx-font-family: 'Barriecito'; -fx-text-fill: white;" />
+
+        <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true"
+                   style="-fx-cursor: hand; -fx-translate-x: 140;">
+            <Image url="@images/french_flag.png" />
+        </ImageView>
+    </HBox>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-padding: 15;">
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
+            <!-- Row 1 -->
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                  style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);"
+                  onMouseEntered="-fx-background-color: #558a2a;" onMouseExited="-fx-background-color: #649a38;">
+                <Label text="Red Riding Hood" style="-fx-font-size: 14px; -fx-text-fill: white;" />
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/book_icon.png" />
+                </ImageView>
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  style="-fx-background-color: #d3d3d3; -fx-text-fill: #808080; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand;"
+                  onMouseEntered="-fx-background-color: #c5c5c5;" onMouseExited="-fx-background-color: #d3d3d3;">
+                <Label text="Three Little Pigs" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/lock.png" />
+                </ImageView>
+            </VBox>
+
+            <!-- Row 2 -->
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                  style="-fx-background-color: #d3d3d3; -fx-text-fill: #808080; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand;"
+                  onMouseEntered="-fx-background-color: #c5c5c5;" onMouseExited="-fx-background-color: #d3d3d3;">
+                <Label text="Tortoise and the Hare" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/lock.png" />
+                </ImageView>
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                  style="-fx-background-color: #d3d3d3; -fx-text-fill: #808080; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand;"
+                  onMouseEntered="-fx-background-color: #c5c5c5;" onMouseExited="-fx-background-color: #d3d3d3;">
+                <Label text="The Little Prince" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/lock.png" />
+                </ImageView>
+            </VBox>
+
+            <!-- Row 3 -->
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                  style="-fx-background-color: #d3d3d3; -fx-text-fill: #808080; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand;"
+                  onMouseEntered="-fx-background-color: #c5c5c5;" onMouseExited="-fx-background-color: #d3d3d3;">
+                <Label text="The Giving Tree" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/lock.png" />
+                </ImageView>
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                  style="-fx-background-color: #d3d3d3; -fx-text-fill: #808080; -fx-border-radius: 10; -fx-padding: 10; -fx-min-width: 140px; -fx-min-height: 90px; -fx-cursor: hand;"
+                  onMouseEntered="-fx-background-color: #c5c5c5;" onMouseExited="-fx-background-color: #d3d3d3;">
+                <Label text="The Very Hungry Caterpillar" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/lock.png" />
+                </ImageView>
+            </VBox>
+        </GridPane>
+
+        <Region prefHeight="30.0" />
+        
+        <Button text="Read" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 350px; -fx-min-height: 50px;" />
+    </VBox>
+
+    <Region VBox.vgrow="ALWAYS" />
+
+    <!-- Footer -->
+    <HBox alignment="CENTER" spacing="30" style="-fx-background-color: #649a38; -fx-padding: 10;">
+        <VBox alignment="CENTER">
+            <Label text="Store" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Favorites" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <Label text="Profile" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+    </HBox>
+</VBox>
