@@ -3,8 +3,6 @@ package com.controllers;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Iterator;
-import java.util.Optional;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

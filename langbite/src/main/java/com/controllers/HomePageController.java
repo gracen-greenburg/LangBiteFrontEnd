@@ -38,6 +38,15 @@ public class HomePageController {
         }
     }
 
+    @FXML private void goToHomepage() {
+        try {
+            App.setRoot("homepage"); // Navigate to homepage.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load homepage.");
+        }
+    }
+
     @FXML private void continueToModule() throws IOException {
         // Get the current user from SessionManager
         JSONObject currentUser = SessionManager.getCurrentUser();
