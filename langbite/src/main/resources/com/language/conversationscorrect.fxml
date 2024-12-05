@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="20"
+      style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.controllers.CorrectScreenController">
+
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15;">
+        <Label text="Correct Answer!" style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;" />
+    </HBox>
+
+    <!-- Main Content -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20; -fx-min-height: 500.0;">
+    
+        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/wavingGator.png" />
+        </ImageView>
+
+        <!-- Congratulations Message -->
+        <Label text="Great job!" style="-fx-font-size: 28px; -fx-text-fill: #649a38; -fx-font-weight: bold;" />
+        <Label text="Your response was correct." style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
+
+        <!-- Next Steps -->
+        <Button text="Next Question" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10; -fx-min-width: 250px; -fx-border-radius: 15; -fx-background-radius: 15;" />
+    </VBox>
+
+    <Region VBox.vgrow="ALWAYS" />
+
+    <!-- Footer Section -->
+    <HBox alignment="CENTER" spacing="30" style="-fx-background-color: #649a38; -fx-padding: 10;">
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/home_icon.png" />
+            </ImageView>
+            <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/settings_icon.png" />
+            </ImageView>
+            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/stats_icon.png" />
+            </ImageView>
+            <Label text="Stats" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+    </HBox>
+</VBox>
