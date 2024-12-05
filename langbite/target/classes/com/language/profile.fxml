@@ -47,7 +47,7 @@
    <HBox prefHeight="100.0" prefWidth="200.0">
       <children>
          <Label stylesheets="@styles.css" text="         French:      " />
-         <ProgressBar prefHeight="20.0" prefWidth="245.0" progress="0.0" />
+         <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="245.0" progress="0.0" />
       </children>
    </HBox>
 </VBox>
