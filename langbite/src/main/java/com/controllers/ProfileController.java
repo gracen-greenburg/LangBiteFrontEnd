@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Iterator;
+import java.util.Optional;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,6 +17,7 @@ import com.model.SessionManager;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextInputDialog;
 
@@ -73,7 +75,7 @@ public class ProfileController {
 
     @FXML private void updateUsername() {
         TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Update Username");
+        dialog.setTitle("Change Username");
         dialog.setHeaderText("Enter a new username:");
         dialog.setContentText("Username:");
 
@@ -87,9 +89,10 @@ public class ProfileController {
     }
 
 
+
     @FXML private void updatePassword() {
         TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Update Password");
+        dialog.setTitle("Change Password");
         dialog.setHeaderText("Enter a new password:");
         dialog.setContentText("Password:");
 
