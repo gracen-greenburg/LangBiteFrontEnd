@@ -15,7 +15,7 @@
 <BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.CombinedController" stylesheets="@styles.css">
     <top>
         <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#goHomePage">
                 <image>
                     <Image url="@images/backarrow.png" />
                 </image>

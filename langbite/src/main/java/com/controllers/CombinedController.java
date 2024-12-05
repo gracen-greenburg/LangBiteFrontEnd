@@ -9,19 +9,19 @@ import java.util.stream.IntStream;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.language.App;
 import com.model.DataLoader;
 import com.model.GrammarRule;
 import com.model.GrammarQuestion;
 import com.model.Question;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-
-import javafx.animation.PauseTransition;
-import javafx.util.Duration;
+import javafx.scene.input.MouseEvent;
 
 public class CombinedController {
 
@@ -244,5 +244,22 @@ public class CombinedController {
             questions.add(question);
         }
         return questions;
+    }
+
+     @FXML private void goHomePage(MouseEvent event) {
+        try {
+            App.setRoot("homepage");
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to navigate to the homepage");
+        }
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

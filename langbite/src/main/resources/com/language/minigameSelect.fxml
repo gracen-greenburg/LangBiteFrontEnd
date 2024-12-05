@@ -18,33 +18,23 @@
             <Image url="@images/frenchflag.png" />
     </ImageView>
    </HBox>
-   <Label style="-fx-font-size: 75px; -fx-padding: 20 0 30 0;" styleClass="title" stylesheets="@styles.css" text="French">
+   <Label style="-fx-font-size: 75px; -fx-padding: 20 0 30 0;" styleClass="title" stylesheets="@styles.css" text="Minigames">
       <font>
          <Font size="42.0" />
       </font>
    </Label>
    <VBox alignment="CENTER" prefWidth="250.0" spacing="25" style="-fx-padding: 20;">
-      <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Continue">
+      <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Drag and Drop">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>
 
-      <Button maxWidth="-Infinity" onAction="#switchToFlashcards" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Flashcards">
+      <Button maxWidth="-Infinity" onAction="#switchToFlashcards" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Matching Game">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>
 
-      <Button maxWidth="-Infinity" onAction="#switchToConversations" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Conversations">
-      <cursor>
-         <Cursor fx:constant="OPEN_HAND" />
-      </cursor></Button>
-
-      <Button maxWidth="-Infinity" onAction="#switchToStories" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Stories">
-      <cursor>
-         <Cursor fx:constant="OPEN_HAND" />
-      </cursor></Button>
-
-      <Button maxWidth="-Infinity" onAction="#switchToMiniGames" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="MiniGames">
+      <Button maxWidth="-Infinity" onAction="#switchToConversations" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Take a Break">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>

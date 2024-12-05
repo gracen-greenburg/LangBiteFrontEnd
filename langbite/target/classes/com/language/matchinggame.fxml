@@ -1,111 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="15"
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="800.0" spacing="15"
       style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
       xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.controllers.MatchingGameController">
 
     <!-- Header Section -->
     <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15;">
-        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-            <Image url="@images/backarrow.png" />
-        </ImageView>
         <Label text="Matching Game" style="-fx-font-size: 20px; -fx-text-fill: white;" />
-        <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@images/matching_game_icon.png" />
-        </ImageView>
     </HBox>
 
     <!-- Instructions -->
-    <Label text="Drag the images on the left to match their French translations on the right!" style="-fx-font-size: 16px; -fx-text-fill: #808080;" />
+    <Label text="Click on a word and then click on the correct part of speech to connect them!" wrapText="true" style="-fx-font-size: 16px; -fx-text-fill: #808080; -fx-padding: 0 0 30 0" />
 
-    <!-- Matching Game Area -->
-    <GridPane alignment="CENTER" hgap="10" vgap="20" style="-fx-padding: 15;">
-        <VBox alignment="CENTER" spacing="15" GridPane.columnIndex="0">
-            <ImageView fx:id="imgBread" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/coin.jpg" />
-            </ImageView>
-            <ImageView fx:id="imgApple" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/clock.jpg" />
-            </ImageView>
-            <ImageView fx:id="imgHouse" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/pillow.jpg" />
-            </ImageView>
-            <ImageView fx:id="imgDog" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/backpack.jpg" />
-            </ImageView>
-            <ImageView fx:id="imgCat" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/toothbrush.jpg" />
-            </ImageView>
-        </VBox>
+    <!-- Dynamic Matching Game Area -->
+    <HBox alignment="CENTER" spacing="50">
+        <VBox fx:id="wordsBox" spacing="15" />
+        <VBox fx:id="targetsBox" spacing="15" />
+    </HBox>
 
-        <!-- Divider -->
-        <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="1">
-            <Label text="⇔" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-            <Label text="⇔" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-            <Label text="⇔" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-            <Label text="⇔" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-            <Label text="⇔" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-        </VBox>
+    <!-- Pane to draw lines -->
+    <Pane fx:id="mainPane" prefHeight="400.0" prefWidth="800.0" />
 
-        <!-- Drop Targets (French Translations) -->
-        <VBox alignment="CENTER" spacing="15" GridPane.columnIndex="2">
-            <StackPane fx:id="targetPain" styleClass="drop-zone">
-                <Label text="Clock" styleClass="drop-zone-label" />
-            </StackPane>
-            <StackPane fx:id="targetPomme" styleClass="drop-zone">
-                <Label text="Backpack" styleClass="drop-zone-label" />
-            </StackPane>
-            <StackPane fx:id="targetMaison" styleClass="drop-zone">
-                <Label text="Toothbrush" styleClass="drop-zone-label" />
-            </StackPane>
-            <StackPane fx:id="targetChien" styleClass="drop-zone">
-                <Label text="Coin" styleClass="drop-zone-label" />
-            </StackPane>
-            <StackPane fx:id="targetChat" styleClass="drop-zone">
-                <Label text="Pillow" styleClass="drop-zone-label" />
-            </StackPane>
-        </VBox>
-    </GridPane>
-
-    <!-- Reset and Shuffle Buttons -->
+    <!-- Shuffle and Reset Buttons -->
     <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10;">
-        <Button text="Shuffle" style="-fx-background-color: #d3d3d3; -fx-text-fill: #649a38; -fx-font-size: 14px; -fx-padding: 10;" fx:id="btnShuffle" />
-        <Button text="Reset" style="-fx-background-color: #d3d3d3; -fx-text-fill: #649a38; -fx-font-size: 14px; -fx-padding: 10;" fx:id="btnReset" />
+        <Button text="Shuffle" fx:id="btnShuffle" onAction="#handleShuffle" />
+        <Button text="Reset" fx:id="btnReset" onAction="#handleReset" />
     </HBox>
 
     <!-- Match Status -->
-    <Label text="Matches: 0/5" style="-fx-font-size: 14px; -fx-text-fill: #808080;" fx:id="lblMatchStatus" />
-
-    <!-- Footer Navigation -->
-    <HBox alignment="CENTER" spacing="30" style="-fx-background-color: #649a38; -fx-padding: 10;">
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/store_icon.png" />
-            </ImageView>
-            <Label text="Store" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/settings_icon.png" />
-            </ImageView>
-            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/home_icon.png" />
-            </ImageView>
-            <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-    </HBox>
+    <Label text="Matches: 0/5" fx:id="lblMatchStatus" style="-fx-font-size: 14px; -fx-text-fill: #808080;" />
 </VBox>
