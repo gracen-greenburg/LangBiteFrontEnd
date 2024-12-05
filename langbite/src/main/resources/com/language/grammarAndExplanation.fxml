@@ -7,48 +7,70 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.CombinedController" stylesheets="@styles.css">
+    <top>
+        <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                <image>
+                    <Image url="@images/backarrow.png" />
+                </image>
+            </ImageView>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                <image>
+                    <Image url="@images/frenchflag.png" />
+                </image>
+            </ImageView>
+        </HBox>
+    </top>
 
 
-<StackPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.controllers.CombinedController" stylesheets="@styles.css">
-    <VBox fx:id="questionPane" alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0">
-   
-    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-            <Image url="@images/grammarplural.png" />
-    </ImageView>
-    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
-            <Image url="@images/confusedgator.png" />
-    </ImageView>
-    <VBox alignment="CENTER" spacing="30">
-   <Label fx:id="questionLabel" wrapText="true" style="-fx-font-size: 20px; -fx-padding: 30 0 0 0" stylesheets="@styles.css" text="This is a Question" styleClass="normal_black_text"/>
-   </VBox>
-   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
-      <children>
-        <VBox alignment="CENTER" fx:id="answerChoicesBox" spacing="10" />
-         <Button fx:id="submitButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="CHECK" onAction="#handleSubmit">
-            <cursor>
-               <Cursor fx:constant="OPEN_HAND" />
-            </cursor>
-         </Button>
-      </children>
-   </VBox>
-    
-</VBox>
 
-    <VBox fx:id="explanationPane" alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="0.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" visible="false">
-   
-    <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-            <Image url="@images/grammarplural.png" />
-    </ImageView>
-        <Label alignment="CENTER" fx:id="resultLabel" wrapText="true" maxWidth="-Infinity" style="-fx-font-size:20px; -fx-padding: 10 0 20 0" />
-         <Label alignment="CENTER" fx:id="ruleExplanationLabel" wrapText="true" maxWidth="-Infinity"  style="-fx-font-size:25px; -fx-padding: 30 0 30 0" styleClass="normal_black_text" stylesheets="@styles.css"  text="This is an explaination"/>
-         
-         <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Next Question" onAction="#handleNextQuestion">
-            <cursor>
-               <Cursor fx:constant="OPEN_HAND" />
-            </cursor>
-         </Button>
-    
-</VBox>
-</StackPane>
+    <!--  Question Pane -->
+    <center>
+        <VBox fx:id="questionPane" alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="20.0">
+        <Label fx:id="titleLabel" style="-fx-font-size: 30px; -fx-padding: 20 0 20 0" textAlignment="CENTER" wrapText="true" styleClass="title" text="Grammar Plural Formation"/>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
+                <image>
+                    <Image url="@images/confusedgator.png" />
+                </image>
+            </ImageView>
+            
+            <VBox alignment="CENTER" spacing="30">
+                <Label fx:id="questionLabel" wrapText="true" style="-fx-font-size: 20px; -fx-padding: 30 10 0 10" stylesheets="@styles.css" text="This is a Question" styleClass="normal_black_text"/>
+            </VBox>
+
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                <VBox alignment="CENTER" fx:id="answerChoicesBox" spacing="10" />
+                <Button fx:id="submitButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="CHECK" onAction="#handleSubmit">
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox fx:id="explanationPane" alignment="CENTER" maxWidth="600" prefHeight="700.0" prefWidth="400.0" spacing="20.0" visible="false">
+           
+            
+            <Label alignment="CENTER" textAlignment="CENTER" fx:id="resultLabel" wrapText="true" maxWidth="-Infinity" style="-fx-font-size:20px; -fx-padding: 10 10 20 10" />
+            <Label alignment="CENTER" textAlignment="CENTER" fx:id="ruleExplanationLabel" wrapText="true" maxWidth="-Infinity" style="-fx-font-size:25px; -fx-padding: 30 0 30 0" styleClass="normal_black_text" stylesheets="@styles.css" text="This is an explanation"/>
+            
+            <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Next Question" onAction="#handleNextQuestion">
+                <cursor>
+                    <Cursor fx:constant="OPEN_HAND" />
+                </cursor>
+            </Button>
+        </VBox>
+    </bottom>
+
+</BorderPane>

@@ -5,34 +5,49 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Priority?>
 
-<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HundredMostCommonWordsController" stylesheets="@styles.css">
-    <VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="20.0">
-
-        <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="false" style="-fx-cursor: hand;">
-            <Image url="@images/100mostcommonwords.png" />
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HundredMostCommonWordsController" alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20;" stylesheets="@styles.css">
+    
+    
+    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <image>
+                <Image url="@images/backarrow.png" />
+            </image>
         </ImageView>
-        <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 20 0 0 0">
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <image>
+                <Image url="@images/frenchflag.png" />
+            </image>
+        </ImageView>
+    </HBox>
+    
+    <Label fx:id="titleLabel" style="-fx-font-size: 30px;" textAlignment="CENTER" wrapText="true" styleClass="title" text="100 Most Common Words">
+    </Label>
+    
+    <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+        <image>
             <Image url="@images/confusedgator.png" />
-        </ImageView>
+        </image>
+    </ImageView>
+   
+    <Label fx:id="questionLabel" style="-fx-font-size: 20px;" styleClass="normal_black_text" text="This is a Question" wrapText="true" textAlignment="CENTER" />
+    
+    <!-- Answer Choices -->
+    <VBox fx:id="answerChoicesBox" alignment="CENTER" spacing="10"/>
+    
+    <Button fx:id="nextButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" text="Next Question" onAction="#handleNextQuestion" disable="true">
+        <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+        </cursor>
+    </Button>
 
-        <!-- Question Label -->
-        <VBox alignment="CENTER" spacing="30">
-            <Label fx:id="questionLabel" style="-fx-font-size: 20px; -fx-padding: 30 0 20 0" styleClass="normal_black_text" stylesheets="@styles.css" text="This is a Question" wrapText="true" />
-        </VBox>
-
-        
-        <VBox fx:id="answerChoicesBox" alignment="CENTER" spacing="10">
-           
-        </VBox>
-
-        <!-- Next Question -->
-        <Button fx:id="nextButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Next Question" onAction="#handleNextQuestion" disable="true">
-            <cursor>
-                <Cursor fx:constant="OPEN_HAND" />
-            </cursor>
-        </Button>
-    </VBox>
-</StackPane>
+</VBox>
