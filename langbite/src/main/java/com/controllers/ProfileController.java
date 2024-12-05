@@ -132,6 +132,23 @@ public class ProfileController {
         }
     }
 
+    @FXML private void goToProfile() {
+        try {
+            App.setRoot("profile"); // Navigate to profile.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load profile page.");
+        }
+    }
+
+    @FXML private void goToHomepage() {
+        try {
+            App.setRoot("homepage"); // Navigate to homepage.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load homepage.");
+        }
+    }
 
     private void showAlert(Alert.AlertType alertType, String title, String content) {
         Alert alert = new Alert(alertType);

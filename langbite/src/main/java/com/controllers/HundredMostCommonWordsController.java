@@ -1,13 +1,16 @@
 package com.controllers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -132,5 +135,31 @@ public class HundredMostCommonWordsController {
         } else {
             questionLabel.setText("You have completed all the questions!");
         }
+    }
+
+    @FXML private void goToProfile() {
+        try {
+            App.setRoot("profile"); // Navigate to profile.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load profile page.");
+        }
+    }
+
+    @FXML private void goToHomepage() {
+        try {
+            App.setRoot("homepage"); // Navigate to homepage.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load homepage.");
+        }
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }

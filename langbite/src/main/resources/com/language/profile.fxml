@@ -5,7 +5,10 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -50,4 +53,31 @@
          <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="245.0" progress="0.0" />
       </children>
    </HBox>
+
+   <HBox prefHeight="100.0" prefWidth="200.0">
+
+      <ImageView fx:id="homepageButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
+         <image>
+            <Image url="@images/homepagebutton.png" />
+         </image>
+      </ImageView>
+      <GridPane prefHeight="87.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+
+      
+      <ImageView fx:id="profileButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
+         <image>
+            <Image url="@images/profilebutton.png" />
+         </image>
+      </ImageView>
+      </HBox>
 </VBox>
