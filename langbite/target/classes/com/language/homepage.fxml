@@ -5,7 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -51,11 +54,29 @@
    </VBox>
 
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="10.0">
-      <ImageView fx:id="profileButton" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#goToProfile">
+
+      <ImageView fx:id="homepageButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@images/homepagebutton.png" />
+         </image>
+      </ImageView>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ImageView fx:id="profileButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
          <image>
             <Image url="@images/profilebutton.png" />
          </image>
       </ImageView>
+      
    </HBox>
 
 </VBox>
