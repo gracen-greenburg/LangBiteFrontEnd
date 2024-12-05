@@ -1,13 +1,12 @@
 package com.language;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.paint.Color;
-
-import java.io.IOException;
 
 /**
  * JavaFX App
@@ -19,7 +18,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("grammarAndExplanation"), 600,800);
+<<<<<<< HEAD
+        scene = new Scene(loadFXML("homepage"), 600,800);
+=======
+        scene = new Scene(loadFXML("connectorwords"), 600,800);
+>>>>>>> 680076871ce04e4dcf5521643b756ece1233332d
         stage.setScene(scene);
         stage.show();
     }

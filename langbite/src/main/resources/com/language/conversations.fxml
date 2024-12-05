@@ -71,5 +71,17 @@
             </ImageView>
             <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 12px;" />
         </VBox>
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/favorites_icon.png" />
+            </ImageView>
+            <Label text="Favorites" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
+        <VBox alignment="CENTER">
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/profile_icon.png" />
+            </ImageView>
+            <Label text="Profile" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+        </VBox>
     </HBox>
 </VBox>
