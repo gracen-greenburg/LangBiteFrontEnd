@@ -29,6 +29,15 @@ public class HomePageController {
         App.setRoot("minigameSelect");
     }
 
+    @FXML private void goToProfile() {
+        try {
+            App.setRoot("profile"); // Navigate to profile.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load profile page.");
+        }
+    }
+
     @FXML private void continueToModule() throws IOException {
         // Get the current user from SessionManager
         JSONObject currentUser = SessionManager.getCurrentUser();
