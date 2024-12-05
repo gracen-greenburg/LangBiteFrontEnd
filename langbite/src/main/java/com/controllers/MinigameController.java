@@ -13,15 +13,15 @@ import javafx.scene.control.Alert;
 
 
 public class MinigameController {
-    @FXML private void switchToFlashcards() throws IOException {
+    @FXML private void switchToDragAndDrop() throws IOException {
         App.setRoot("draganddrop");
     }
 
-    @FXML private void switchToConversations() throws IOException {
+    @FXML private void switchToMatching() throws IOException {
         App.setRoot("matchinggame");
     }
 
-    @FXML private void switchToStories() throws IOException {
-        App.setRoot("stories");
+    @FXML private void switchToBreak() throws IOException {
+        App.setRoot("takeabreak");
     }
 }

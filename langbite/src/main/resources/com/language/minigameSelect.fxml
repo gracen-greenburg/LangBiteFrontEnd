@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="10.0" style="-fx-padding: 20 0 0 0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HomePageController">
+<VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="10.0" style="-fx-padding: 20 0 0 0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MinigameController">
    <HBox spacing="290">
    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 0 100 0 0;">
             <Image url="@images/backarrow.png" />
@@ -24,17 +24,17 @@
       </font>
    </Label>
    <VBox alignment="CENTER" prefWidth="250.0" spacing="25" style="-fx-padding: 20;">
-      <Button maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Drag and Drop">
+      <Button maxWidth="-Infinity" onAction="#switchToDragAndDrop" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Drag and Drop">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>
 
-      <Button maxWidth="-Infinity" onAction="#switchToFlashcards" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Matching Game">
+      <Button maxWidth="-Infinity" onAction="#switchToMatching" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Matching Game">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>
 
-      <Button maxWidth="-Infinity" onAction="#switchToConversations" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Take a Break">
+      <Button maxWidth="-Infinity" onAction="#switchToBreak" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="Take a Break">
       <cursor>
          <Cursor fx:constant="OPEN_HAND" />
       </cursor></Button>

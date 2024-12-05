@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
 
 <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="15"
       style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
       xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.controllers.DragAndDropController">
 
-    <!-- Header Section -->
+    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#goHomePage">
+            <image>
+                <Image url="@images/backarrow.png" />
+            </image>
+        </ImageView>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <image>
+                <Image url="@images/frenchflag.png" />
+            </image>
+        </ImageView>
+    </HBox>
+
     <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15;">
         <Label text="Drag and Drop Game" style="-fx-font-size: 20px; -fx-text-fill: white;" />
     </HBox>
 
-    <!-- Instructions Section -->
     <Label text="Drag the English words to their French translation:" style="-fx-font-size: 14px; -fx-text-fill: #578631;" />
 
     <VBox fx:id="wordsVBox" alignment="CENTER" spacing="10">
-            <Label text="Words to Match" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
-            <!--words added in controller-->
-     </VBox>
+        <Label text="Words to Match" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
+        <!-- Words add in controller -->
+    </VBox>
 
-    <!-- Drag and Drop Game Section -->
     <HBox spacing="15" style="-fx-padding: 10; -fx-border-color: #578631; -fx-border-width: 2;">
-        <!-- Categories Section -->
         <VBox fx:id="englishWordsVBox" alignment="CENTER" spacing="15">
             <Label text="English Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
         </VBox>
@@ -35,28 +50,8 @@
             <Label text="French Words" style="-fx-font-size: 16px; -fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 10;" />
         </VBox>
     </HBox>
-
     <VBox alignment="CENTER" spacing="10">
-        <Button fx:id="shuffleButton"  maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="SHUFFLE" onAction="#shuffleWords"/>
-        <Button fx:id="resetButton"  maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="RESET" onAction="#resetGame"/>
+        <Button fx:id="shuffleButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="SHUFFLE" onAction="#shuffleWords"/>
+        <Button fx:id="resetButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" stylesheets="@styles.css" text="RESET" onAction="#resetGame"/>
     </VBox>
-
-    <!-- Footer Section -->
-    <HBox alignment="CENTER" spacing="30" style="-fx-background-color: #649a38; -fx-padding: 15;">
-        <VBox alignment="CENTER">
-            <Label text="Store" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <Label text="Favorites" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <Label text="Profile" style="-fx-text-fill: white; -fx-font-size: 12px;" />
-        </VBox>
-    </HBox>
 </VBox>

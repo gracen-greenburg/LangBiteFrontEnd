@@ -1,5 +1,6 @@
 package com.controllers;
 
+import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
 import javafx.fxml.FXML;
@@ -10,7 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.animation.PauseTransition;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -112,6 +116,11 @@ public class MatchingGameController {
     private void handleShuffle() {
         // Shuffle logic for the game elements
         shuffleWordsAndLoadGameItems();
+    }
+
+    @FXML
+    private void goHomePage(MouseEvent event) throws IOException {
+        App.setRoot("homepage"); // Replace with your actual home page FXML
     }
 
     @FXML

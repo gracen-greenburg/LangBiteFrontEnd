@@ -6,11 +6,30 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.Region?>
 
 <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="800.0" spacing="15"
       style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
       xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.controllers.MatchingGameController">
+
+    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#goHomePage">
+            <image>
+                <Image url="@images/backarrow.png" />
+            </image>
+        </ImageView>
+
+        <Region HBox.hgrow="ALWAYS" />
+
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <image>
+                <Image url="@images/frenchflag.png" />
+            </image>
+        </ImageView>
+    </HBox>
 
     <!-- Header Section -->
     <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15;">

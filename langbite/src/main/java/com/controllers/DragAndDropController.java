@@ -1,8 +1,10 @@
 package com.controllers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
 
@@ -15,6 +17,7 @@ import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
+import javafx.scene.input.MouseEvent;
 
 public class DragAndDropController {
 
@@ -163,6 +166,11 @@ public class DragAndDropController {
         });
 
 
+    }
+
+    @FXML
+    private void goHomePage(MouseEvent event) throws IOException {
+        App.setRoot("homepage"); // Replace "homepage" with the actual name of your home page FXML file
     }
 
 }
