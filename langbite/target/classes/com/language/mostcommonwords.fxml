@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HundredMostCommonWordsController" alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20;" stylesheets="@styles.css">
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HundredMostCommonWordsController">
     
     
-    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;" maxWidth="Infinity">
+    <HBox alignment="CENTER" maxWidth="Infinity" spacing="20" style="-fx-padding: 10;">
         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
             <image>
                 <Image url="@images/backarrow.png" />
@@ -30,7 +31,7 @@
         </ImageView>
     </HBox>
     
-    <Label fx:id="titleLabel" style="-fx-font-size: 30px;" textAlignment="CENTER" wrapText="true" styleClass="title" text="100 Most Common Words">
+    <Label fx:id="titleLabel" style="-fx-font-size: 30px;" styleClass="title" text="100 Most Common Words" textAlignment="CENTER" wrapText="true">
     </Label>
     
     <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
@@ -39,15 +40,43 @@
         </image>
     </ImageView>
    
-    <Label fx:id="questionLabel" style="-fx-font-size: 20px;" styleClass="normal_black_text" text="This is a Question" wrapText="true" textAlignment="CENTER" />
+    <Label fx:id="questionLabel" style="-fx-font-size: 20px;" styleClass="normal_black_text" text="This is a Question" textAlignment="CENTER" wrapText="true" />
     
     <!-- Answer Choices -->
-    <VBox fx:id="answerChoicesBox" alignment="CENTER" spacing="10"/>
+    <VBox fx:id="answerChoicesBox" alignment="CENTER" spacing="10" />
     
-    <Button fx:id="nextButton" maxWidth="-Infinity" prefWidth="250.0" styleClass="button" text="Next Question" onAction="#handleNextQuestion" disable="true">
+    <Button fx:id="nextButton" disable="true" maxWidth="-Infinity" onAction="#handleNextQuestion" prefWidth="250.0" styleClass="button" text="Next Question">
         <cursor>
             <Cursor fx:constant="OPEN_HAND" />
         </cursor>
     </Button>
+
+
+    <HBox prefHeight="100.0" prefWidth="200.0">
+
+      <ImageView fx:id="homepageButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
+         <image>
+            <Image url="@images/homepagebutton.png" />
+         </image>
+      </ImageView>
+      <GridPane prefHeight="100.0" prefWidth="297.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+
+      
+      <ImageView fx:id="profileButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
+         <image>
+            <Image url="@images/profilebutton.png" />
+         </image>
+      </ImageView>
+      </HBox>
 
 </VBox>
