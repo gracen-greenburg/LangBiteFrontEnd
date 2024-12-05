@@ -33,7 +33,7 @@
     <GridPane alignment="CENTER" hgap="10" vgap="20" style="-fx-padding: 15;">
         <VBox alignment="CENTER" spacing="15" GridPane.columnIndex="0">
             <ImageView fx:id="imgBread" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-                <Image url="@images/coin.jpg" />
+                <Image url="@images/coin.png" />
             </ImageView>
             <ImageView fx:id="imgApple" fitWidth="100.0" fitHeight="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                 <Image url="@images/clock.jpg" />
