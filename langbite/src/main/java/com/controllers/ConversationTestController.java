@@ -2,11 +2,15 @@ package com.controllers;
 
 import java.util.Map;
 
+import com.language.App;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class ConversationTestController {
@@ -73,4 +77,22 @@ public class ConversationTestController {
             e.printStackTrace();
         }
     }
+
+    @FXML private void goHomePage(MouseEvent event) {
+        try {
+            App.setRoot("homepage");
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to navigate to the homepage");
+        }
+    }
+
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
 }
