@@ -10,6 +10,7 @@ import org.json.simple.JSONObject;
 import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
+import com.narriation.Narriator;
 
 import javafx.scene.control.TextField;
 import javafx.scene.chart.PieChart.Data;
@@ -101,6 +102,11 @@ public class FlashcardsController {
                 currentWord.setText(word.getFrench());
             }
         }
+    }
+
+    @FXML
+    private void speakWord(MouseEvent event) throws IOException {
+        Narriator.playSound(currentWord.getText());
     }
 }
 

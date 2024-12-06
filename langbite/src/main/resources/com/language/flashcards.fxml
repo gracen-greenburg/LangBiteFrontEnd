@@ -33,6 +33,11 @@
                 <Image url="@images/refresh1.png" />
             </image>
         </ImageView>
+        <ImageView fx:id="playSound"  onMouseClicked="#speakWord" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" StackPane.alignment="BOTTOM_LEFT">
+            <image>
+                <Image url="@images/sound.png" />
+            </image>
+        </ImageView>
     </StackPane>
 
     <!-- Shuffle Button -->
