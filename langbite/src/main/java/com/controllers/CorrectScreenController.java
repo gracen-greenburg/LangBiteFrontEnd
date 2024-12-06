@@ -1,6 +1,8 @@
 package com.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -13,19 +15,17 @@ public class CorrectScreenController {
     public void initialize() {
         if (nextQuestionButton != null) {
             nextQuestionButton.setOnAction(event -> {
-                
-                Stage stage = (Stage) nextQuestionButton.getScene().getWindow();
-                loadNextQuestion(stage);
+                System.out.println("Navigating to home page...");
+                loadHomePage();
             });
-        } else {
-            System.err.println("nextQuestionButton is not initialized. Check your FXML file.");
         }
     }
 
-    private void loadNextQuestion(Stage stage) {
+    private void loadHomePage() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/next_question.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/homepage.fxml")); // Replace with your home screen FXML
             Scene nextScene = new Scene(loader.load());
+            Stage stage = (Stage) nextQuestionButton.getScene().getWindow();
             stage.setScene(nextScene);
         } catch (Exception e) {
             e.printStackTrace();

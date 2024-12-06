@@ -12,9 +12,11 @@ import org.json.simple.JSONObject;
 
 import com.language.App;
 import com.model.DataLoader;
+import com.model.DataWriter;
 import com.model.GrammarRule;
 import com.model.GrammarQuestion;
 import com.model.Question;
+import com.model.SessionManager;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -106,7 +108,9 @@ public class CombinedController {
 
     @FXML
     private void handleNextQuestion() {
+        // Next Word
         currentQuestionIndex++;
+        updateProgress();
         if (hasNextQuestion()) {
             loadQuestion(currentQuestionIndex);
             showQuestionPane();
@@ -255,6 +259,37 @@ public class CombinedController {
             showAlert(Alert.AlertType.ERROR, "Error", "Failed to navigate to the homepage");
         }
     }
+
+
+    @FXML private void updateProgress() {
+        JSONObject currentUser = SessionManager.getCurrentUser();
+        if (currentUser != null) {
+            JSONObject progress = (JSONObject) currentUser.get("progress");
+            if (progress != null) {
+                // Calculate progress percentage
+                int percentage = (int) Math.round(((double) (currentGrammarRuleIndex + 1) / grammarRules.size()) * 100);
+    
+                // Clamp value at 100% to prevent rounding issues
+                if (percentage > 100) {
+                    percentage = 100;
+                }
+    
+                // Update progress
+                progress.put("grammarRulesCompletionPercentage", percentage);
+            }
+            
+            // Save the updated user data
+            DataWriter.saveUser(currentUser);
+    
+            // Update SessionManager to reflect the latest progress
+            SessionManager.setCurrentUser(currentUser); // Sync session with updated user data
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Error", "No user is currently logged in.");
+        }
+    }
+    
+    
+
 
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);

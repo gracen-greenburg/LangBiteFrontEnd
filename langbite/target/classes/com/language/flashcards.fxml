@@ -22,9 +22,6 @@
         <Region HBox.hgrow="ALWAYS" />
     </HBox>
 
-    <!-- Progress Section -->
-    <Label styleClass="label" text="1/20" />
-
     <!-- Flashcard Section -->
     <StackPane alignment="CENTER" prefHeight="198.0" prefWidth="408.0" style="-fx-border-color: #578631; -fx-border-width: 2; -fx-border-radius: 10; -fx-padding: 15;">
         <Label fx:id="currentWord" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #808080;" text="Bread" />
@@ -49,51 +46,14 @@
         <Button styleClass="button" text="Next" onAction="#handleNext" style="-fx-cursor: hand;" />
     </HBox>
 
-    <!-- Footer Navigation Hub -->
-    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="400.0" spacing="40" style="-fx-background-color: #649a38; -fx-padding: 3; -fx-border-radius: 0;" VBox.vgrow="ALWAYS">
-        <VBox alignment="CENTER" spacing="5">
-            <ImageView fx:id="storeImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/store_icon.png" />
-                </image>
-            </ImageView>
-            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Store" />
-        </VBox>
 
-        <VBox alignment="CENTER" spacing="5">
-            <ImageView fx:id="settingsImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/settings_icon.png" />
-                </image>
-            </ImageView>
-            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Settings" />
-        </VBox>
+ <!-- Question Section -->
+    <VBox alignment="CENTER" spacing="-25" style="-fx-padding: 40; -fx-background-color: #ffffff; -fx-border-color: #649a38; -fx-border-width: 2; -fx-border-radius: 15; -fx-background-radius: 15; -fx-pref-height: 400.0;">
+        <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/flashcards.jpg" />
+        </ImageView>
+    </VBox>
 
-        <VBox alignment="CENTER" spacing="5">
-            <ImageView fx:id="homeImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/home_icon.png" />
-                </image>
-            </ImageView>
-            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Home" />
-        </VBox>
-
-        <VBox alignment="CENTER" spacing="5">
-            <ImageView fx:id="favoritesImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/favorites_icon.png" />
-                </image>
-            </ImageView>
-            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Favorites" />
-        </VBox>
-
-        <VBox alignment="CENTER" spacing="5">
-            <ImageView fx:id="profileImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@images/profile_icon.png" />
-                </image>
-            </ImageView>
-            <Label style="-fx-text-fill: white; -fx-font-size: 13px;" text="Profile" />
-        </VBox>
-    </HBox>
+    <!-- Footer -->
+    <HBox alignment="CENTER" prefHeight="1.0" style="-fx-background-color: #649a38; -fx-padding: 10; -fx-border-radius: 0;" VBox.vgrow="ALWAYS" />
 </VBox>

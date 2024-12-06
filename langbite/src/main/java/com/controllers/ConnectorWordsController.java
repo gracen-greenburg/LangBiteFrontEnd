@@ -5,8 +5,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.json.simple.JSONObject;
+
 import com.language.App;
 import com.model.DataLoader;
+import com.model.DataWriter;
+import com.model.SessionManager;
 import com.model.Word;
 
 import javafx.fxml.FXML;
@@ -156,6 +160,7 @@ public class ConnectorWordsController {
 
     @FXML
     private void handleNextQuestion(ActionEvent event) {
+        // Next Word
         currentWordIndex++;
         if (currentWordIndex < connectorWords.size()) {
             loadQuestion(currentWordIndex);
@@ -164,7 +169,36 @@ public class ConnectorWordsController {
         }
     }
 
+    
 
+    @FXML private void updateProgress() {
+        JSONObject currentUser = SessionManager.getCurrentUser();
+        if (currentUser != null) {
+            JSONObject progress = (JSONObject) currentUser.get("progress");
+            if (progress != null) {
+                // Calculate progress percentage
+                int percentage = (int) Math.round(((double) (currentWordIndex + 1) / connectorWords.size()) * 100);
+    
+                // Clamp value at 100% to prevent rounding issues
+                if (percentage > 100) {
+                    percentage = 100;
+                }
+    
+                // Update progress
+                progress.put("connectorWordsCompletionPercentage", percentage);
+            }
+            
+            // Save the updated user data
+            DataWriter.saveUser(currentUser);
+    
+            // Update SessionManager to reflect the latest progress
+            SessionManager.setCurrentUser(currentUser); // Sync session with updated user data
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Error", "No user is currently logged in.");
+        }
+    }
+    
+    
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
