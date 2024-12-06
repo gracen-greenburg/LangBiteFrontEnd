@@ -22,7 +22,7 @@
         </font>
     </Label>
 
-    <!-- French Language Card (Active/Selected Language) -->
+    <!-- French Language Card (Active Language) -->
     <HBox alignment="CENTER_LEFT" spacing="10" 
           style="-fx-background-color: #649a38; 
                  -fx-padding: 10; 

@@ -8,16 +8,16 @@ import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
 
+import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
-import javafx.animation.PauseTransition;
 import javafx.util.Duration;
-import javafx.scene.input.MouseEvent;
 
 public class DragAndDropController {
 
@@ -89,7 +89,7 @@ public class DragAndDropController {
     // CREATE DRAGGABLE LABEL
     private Label createDraggableLabel(String text) {
         Label label = new Label(text);
-        // using our label set style
+        // using label set style
         label.setStyle("-fx-background-color: #649a38; -fx-text-fill: white; -fx-padding: 5; -fx-font-size: 14px;");
         label.setOnDragDetected(event -> {
             Dragboard db = label.startDragAndDrop(TransferMode.MOVE);
@@ -170,7 +170,7 @@ public class DragAndDropController {
 
     @FXML
     private void goHomePage(MouseEvent event) throws IOException {
-        App.setRoot("homepage"); // Replace "homepage" with the actual name of your home page FXML file
+        App.setRoot("homepage"); 
     }
 
 }

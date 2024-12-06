@@ -22,7 +22,7 @@
         <Label text="Conversations" style="-fx-font-size: 24px; -fx-text-fill: white;" />
     </HBox>
 
-    <!-- Spacer to Push Content -->
+    
     <Region VBox.vgrow="ALWAYS" />
 
     <!-- Question Section -->
@@ -43,5 +43,4 @@
     <!-- Spacer to Push Footer -->
     <Region VBox.vgrow="ALWAYS" />
 
-    
 </VBox>

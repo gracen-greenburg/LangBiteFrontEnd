@@ -30,10 +30,9 @@
 
     <!-- Home Content -->
     <VBox alignment="CENTER" spacing="15" style="-fx-padding: 15;">
-        <!-- Start Button -->
+        
         <Button text="Start" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 20px; -fx-padding: 20; -fx-min-width: 350px; -fx-min-height: 60px;" />
 
-        <!-- Spacer between Start and Sections -->
         <Region prefHeight="30.0" />
 
         <!-- Locked Options -->

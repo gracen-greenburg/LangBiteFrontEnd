@@ -20,13 +20,12 @@
         <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@images/wavingGator.png" />
         </ImageView>
-        <!-- Congratulations Message -->
+       
         <Label text="Great job!" style="-fx-font-size: 28px; -fx-text-fill: #649a38; -fx-font-weight: bold;" />
         <Label text="Your response was correct." style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-        <!-- Next Steps -->
+        
         <Button text="Back Home" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10; -fx-min-width: 250px; -fx-border-radius: 15; -fx-background-radius: 15;" />
     </VBox>
     <Region VBox.vgrow="ALWAYS" />
-   
-    
+
 </VBox>

@@ -23,7 +23,7 @@ public class CorrectScreenController {
 
     private void loadHomePage() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/homepage.fxml")); // Replace with your home screen FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/homepage.fxml")); 
             Scene nextScene = new Scene(loader.load());
             Stage stage = (Stage) nextQuestionButton.getScene().getWindow();
             stage.setScene(nextScene);
