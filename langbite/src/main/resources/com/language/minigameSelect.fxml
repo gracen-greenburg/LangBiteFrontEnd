@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" maxWidth="400" prefHeight="700.0" prefWidth="400.0" spacing="10.0" style="-fx-padding: 20 0 0 0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MinigameController">
-   <HBox spacing="290">
+   <HBox alignment="CENTER" spacing="290">
    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand; -fx-padding: 0 100 0 0;">
             <Image url="@images/backarrow.png" />
     </ImageView>
