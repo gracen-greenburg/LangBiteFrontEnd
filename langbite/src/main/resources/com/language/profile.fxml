@@ -32,15 +32,15 @@
             <Image url="@images/profile.png" />
     </ImageView>
     <HBox alignment="CENTER" prefWidth="250.0">
-      <Button fx:id="usernameButton" onAction="#updateUsername" style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Username" textAlignment="CENTER" />
+      <Button fx:id="usernameButton" onAction="#updateUsername" style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Change Username" textAlignment="CENTER" />
     </HBox>
     
     <HBox alignment="CENTER" prefWidth="250.0">
-    <Button fx:id="passwordButton" onAction="#updatePassword" style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Password" textAlignment="CENTER" />
+    <Button fx:id="passwordButton" onAction="#updatePassword" style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Change Password" textAlignment="CENTER" />
     </HBox>
     <HBox alignment="CENTER" spacing="5">
       <children>
-         <Button style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Language" textAlignment="CENTER" />
+         <Button style="-fx-padding: 0 200 0 0; -fx-font-size: 20px;" styleClass="button-text" stylesheets="@styles.css" text="Change Language" textAlignment="CENTER" />
       </children></HBox>
    <HBox alignment="CENTER" prefHeight="29.0" prefWidth="400.0">
       <children>
