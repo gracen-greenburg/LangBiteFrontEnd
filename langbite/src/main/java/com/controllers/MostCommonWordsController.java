@@ -3,8 +3,7 @@ package com.controllers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-
-import org.json.simple.JSONObject;
+import java.util.List;
 
 import com.language.App;
 import com.model.DataLoader;
@@ -14,103 +13,156 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.event.ActionEvent;
 
-public class  MostCommonWordsController{
+public class MostCommonWordsController {
 
-    @FXML private Label lblFrenchWord;
-    @FXML private Button btnOption1;
-    @FXML private Button btnOption2;
-    @FXML private Button btnOption3;
-    @FXML private Button btnOption4;
+    @FXML private VBox questionPane;
+    @FXML private Label questionLabel;
+    @FXML private VBox answerChoicesBox;
+    @FXML private Button nextButton;
 
-    private ArrayList<Word> words;
+    private List<Word> commonWords;
+    private int currentWordIndex = 0;
     private Word currentWord;
 
     @FXML
-    public void initialize() {
-        // Load words of type "100MostCommonWords"
-        words = DataLoader.loadWords();
-        words.removeIf(word -> !word.getType().equals("100MostCommonWords"));
+    private void initialize() {
+        try {
+            // All Words
+            List<Word> allWords = DataLoader.loadWords();
+            commonWords = new ArrayList<>();
 
-        // Shuffle the words for randomness
-        Collections.shuffle(words);
+            // 100 most common words
+            for (Word word : allWords) {
+                if ("100MostCommonWords".equals(word.getType())) {
+                    commonWords.add(word);
+                }
+            }
 
-        // Display the first word
-        displayNextWord();
+            // Shuffle 
+            Collections.shuffle(commonWords);
+
+            if (!commonWords.isEmpty()) {
+                loadQuestion(currentWordIndex);
+            } else {
+                questionLabel.setText("No common words found.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            questionLabel.setText("Failed to load data.");
+        }
     }
 
-    // Method to go back
-    @FXML private void goBack() {
+    @FXML
+    private void goBack() {
         try {
-            App.setRoot("homepage"); 
+            App.setRoot("homepage");
         } catch (IOException e) {
             e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load the homepage.");
         }
     }
 
-    private void displayNextWord() {
-        if (words.isEmpty()) {
-            showAlert(Alert.AlertType.INFORMATION, "Congratulations!", "You have mastered all 100MostCommonWords!");
-            return;
+    private void loadQuestion(int index) {
+        if (index < commonWords.size()) {
+            currentWord = commonWords.get(index);
+            questionLabel.setText("What is the French word for: " + currentWord.getEnglish());
+            nextButton.setDisable(true);
+            loadAnswerChoices(currentWord);
+        } else {
+            questionLabel.setText("No more questions available.");
+            nextButton.setDisable(true);
+        }
+    }
+
+    private void loadAnswerChoices(Word correctWord) {
+        answerChoicesBox.getChildren().clear(); // Clear
+
+        // Prepare a list of choices including the correct answer and 3 random wrong answers
+        List<Word> choices = new ArrayList<>();
+        choices.add(correctWord);
+        
+        // Get 3 wrong answers
+        List<Word> shuffledWords = new ArrayList<>(commonWords);
+        Collections.shuffle(shuffledWords);
+        
+        for (Word word : shuffledWords) {
+            if (choices.size() >= 4) break;
+            if (!word.getFrench().equals(correctWord.getFrench())) {
+                choices.add(word);
+            }
+        }
+        
+        // Shuffle 
+        Collections.shuffle(choices);
+
+        for (Word choice : choices) {
+            Button answerButton = new Button(choice.getFrench());
+            answerButton.getStyleClass().add("button");
+            answerButton.setOnAction(event -> handleAnswerSelection(answerButton, choice.getFrench(), correctWord.getFrench()));
+            answerChoicesBox.getChildren().add(answerButton);
+        }
+    }
+
+    private void handleAnswerSelection(Button selectedButton, String selected, String correctAnswer) {
+        if (selected.equals(correctAnswer)) {
+            selectedButton.setStyle("-fx-background-color: green");
+            questionLabel.setText("Correct!");
+        } else {
+            selectedButton.setStyle("-fx-background-color: red");
+            questionLabel.setText("Incorrect. The correct answer is: " + correctAnswer);
         }
 
-        // Get the next word
-        currentWord = words.remove(0);
-
-        // Set the French word in the label
-        lblFrenchWord.setText(currentWord.getFrench());
-
-        // Randomize options for the buttons
-        ArrayList<String> options = new ArrayList<>();
-        options.add(currentWord.getEnglish()); // Add correct answer
-
-        // Add random incorrect options
-        for (Word word : words) {
-            if (options.size() >= 4) break;
-            if (!options.contains(word.getEnglish())) {
-                options.add(word.getEnglish());
+        for (javafx.scene.Node node : answerChoicesBox.getChildren()) {
+            if (node instanceof Button) {
+                Button button = (Button) node;
+                if (button != selectedButton) {
+                    button.setOpacity(0.5);  
+                } else {
+                    button.setOpacity(1.0);  
+                }
             }
         }
 
-        // Shuffle the options
-        Collections.shuffle(options);
-
-        // Assign options to buttons
-        btnOption1.setText(options.get(0));
-        btnOption2.setText(options.get(1));
-        btnOption3.setText(options.get(2));
-        btnOption4.setText(options.get(3));
-    }
-
-    @FXML
-    private void handleOption1() {
-        checkAnswer(btnOption1.getText());
-    }
-
-    @FXML
-    private void handleOption2() {
-        checkAnswer(btnOption2.getText());
-    }
-
-    @FXML
-    private void handleOption3() {
-        checkAnswer(btnOption3.getText());
-    }
-
-    @FXML
-    private void handleOption4() {
-        checkAnswer(btnOption4.getText());
-    }
-
-    private void checkAnswer(String selectedOption) {
-        if (selectedOption.equals(currentWord.getEnglish())) {
-            showAlert(Alert.AlertType.INFORMATION, "Correct!", "Great job!");
-        } else {
-            showAlert(Alert.AlertType.ERROR, "Incorrect", "The correct answer was: " + currentWord.getEnglish());
+        for (javafx.scene.Node node : answerChoicesBox.getChildren()) {
+            if (node instanceof Button) {
+                node.setDisable(true);
+            }
         }
 
-        // Display the next word
-        displayNextWord();
+        nextButton.setDisable(false);
+    }
+
+    @FXML
+    private void handleNextQuestion(ActionEvent event) {
+        // Next Word
+        currentWordIndex++;
+        if (currentWordIndex < commonWords.size()) {
+            loadQuestion(currentWordIndex);
+        } else {
+            questionLabel.setText("You have completed all the questions!");
+        }
+    }
+
+    @FXML private void goToProfile() {
+        try {
+            App.setRoot("profile"); // Navigate to profile.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load profile page.");
+        }
+    }
+
+    @FXML private void goToHomepage() {
+        try {
+            App.setRoot("homepage"); // Navigate to homepage.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load homepage.");
+        }
     }
 
     private void showAlert(Alert.AlertType alertType, String title, String message) {
