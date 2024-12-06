@@ -74,9 +74,25 @@ public class TakeABreakController {
     private void addBackgroundText() {
         Label backgroundText = new Label("TAKE A BRAIN BREAK");
         backgroundText.setStyle("-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: green;");
-        backgroundText.setLayoutX(50); // Set X position of the text
-        backgroundText.setLayoutY(50); // Set Y position of the text
+    
+        // Add the label to the AnchorPane first
         anchorPane.getChildren().add(0, backgroundText);
+    
+        // Center the label in the AnchorPane
+        double paneWidth = anchorPane.getWidth();
+        double paneHeight = anchorPane.getHeight();
+        
+        backgroundText.setLayoutX((paneWidth - backgroundText.getWidth()) / 2);
+        backgroundText.setLayoutY(50);  // Keep the vertical position fixed at 50 px from the top
+    
+        // Add listeners to update position on resizing
+        anchorPane.widthProperty().addListener((obs, oldVal, newVal) -> {
+            backgroundText.setLayoutX((newVal.doubleValue() - backgroundText.getWidth()) / 2);
+        });
+    
+        backgroundText.widthProperty().addListener((obs, oldVal, newVal) -> {
+            backgroundText.setLayoutX((anchorPane.getWidth() - newVal.doubleValue()) / 2);
+        });
     }
 
     private void handleMouseMovement(double mouseX, double mouseY) {
