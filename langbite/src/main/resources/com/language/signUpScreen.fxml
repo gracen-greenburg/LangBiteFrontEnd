@@ -13,6 +13,7 @@
    <!-- Back Button -->
    <HBox prefHeight="53.0" prefWidth="400.0">
       <children>
+<<<<<<< HEAD
          <ImageView 
              fitHeight="78.0" 
              fitWidth="63.0" 
@@ -20,6 +21,9 @@
              pickOnBounds="true" 
              preserveRatio="true" 
              style="-fx-cursor: open-hand;">
+=======
+         <ImageView fitHeight="78.0" fitWidth="63.0" onMouseClicked="#switchToLogin" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+>>>>>>> 4b1c96e0a42e6b79421a696d3d7f3adfed049743
             <image>
                <Image url="@images/backarrow.png" />
             </image>

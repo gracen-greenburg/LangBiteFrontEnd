@@ -88,7 +88,7 @@
 
         <Region prefHeight="30.0" />
         
-        <Button text="Read" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 350px; -fx-min-height: 50px;" />
+        <Button fx:id="goToStory" text="Read" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 350px; -fx-min-height: 50px;" />
     </VBox>
 
     <Region VBox.vgrow="ALWAYS" />

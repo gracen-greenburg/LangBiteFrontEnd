@@ -22,7 +22,7 @@ public class HomePageController {
     }
 
     @FXML private void switchToStories() throws IOException {
-        App.setRoot("stories");
+        App.setRoot("storiesselections");
     }
 
     @FXML private void switchToMiniGames() throws IOException {
