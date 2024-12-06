@@ -1,10 +1,11 @@
 package com.controllers;
 
+import java.util.Map;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -16,10 +17,18 @@ public class ConversationTestController {
     @FXML
     private Button submitButton;
 
-    @FXML
-    private Label progressLabel;
-
     private int questionNumber = 1;
+
+    private final Map<Integer, String> answers = Map.of(
+        1, "green",
+        2, "blue",
+        3, "Red"
+    );
+
+    private final Map<Integer, String> nextScreens = Map.of(
+        1, "conversation2.fxml",
+        2, "conversation3.fxml"
+    );
 
     @FXML
     public void initialize() {
@@ -28,25 +37,23 @@ public class ConversationTestController {
 
     private void handleSubmit() {
         String answer = userInput.getText().trim().toLowerCase();
-
-        if (questionNumber == 1 && answer.equals("green")) {
-            loadNextQuestion("Conversation2.fxml", "2/3");
-        } else if (questionNumber == 2 && answer.equals("blue")) {
-            loadNextQuestion("Conversation3.fxml", "3/3");
-        } else if (questionNumber == 3 && answer.equals("red")) {
-            loadFinalScreen();
+        if (answers.get(questionNumber).equals(answer)) {
+            userInput.setStyle("-fx-border-color: green;");
+            if (questionNumber < 3) {
+                loadNextQuestion(nextScreens.get(questionNumber));
+            } else {
+                loadFinalScreen();
+            }
         } else {
-            // Optionally, show an error message if the answer is wrong
+            userInput.setStyle("-fx-border-color: red;");
             userInput.clear();
             userInput.setPromptText("Try again!");
         }
     }
 
-    private void loadNextQuestion(String nextFXML, String progress) {
+    private void loadNextQuestion(String nextFXML) {
         try {
             questionNumber++;
-            progressLabel.setText(progress);
-
             Stage stage = (Stage) submitButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/" + nextFXML));
             Scene nextScene = new Scene(loader.load());
