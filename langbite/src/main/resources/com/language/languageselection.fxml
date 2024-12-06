@@ -22,7 +22,7 @@
         </font>
     </Label>
 
-    <!-- French Language Card (Active Language) -->
+    <!-- French Language Card (Active/Selected Language) -->
     <HBox alignment="CENTER_LEFT" spacing="10" 
           style="-fx-background-color: #649a38; 
                  -fx-padding: 10; 
@@ -37,23 +37,22 @@
                text="French" />
     </HBox>
 
-    <!-- Spanish Language Card -->
+    <!-- Spanish Language Card  -->
     <HBox alignment="CENTER_LEFT" spacing="10" 
           style="-fx-background-color: #D3D3D3; 
                  -fx-padding: 10; 
                  -fx-border-radius: 10; 
                  -fx-background-radius: 10;">
         <Label style="-fx-font-size: 16px; -fx-font-family: Arial; -fx-font-weight: bold; -fx-text-fill: #808080;" 
-               text="Spanish" />
+               text="Spanishg" />
     </HBox>
 
-    <!-- German Language Card -->
+    <!-- German Language Card  -->
     <HBox alignment="CENTER_LEFT" spacing="10" 
           style="-fx-background-color: #D3D3D3; 
                  -fx-padding: 10; 
                  -fx-border-radius: 10; 
                  -fx-background-radius: 10;">
-        <ImageView fitHeight="30" fitWidth="30" pickOnBounds="true" preserveRatio="true">
         <Label style="-fx-font-size: 16px; -fx-font-family: Arial; -fx-font-weight: bold; -fx-text-fill: #808080;" 
                text="German" />
     </HBox>
