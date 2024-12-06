@@ -6,6 +6,7 @@ import java.util.Collections;
 
 import org.json.simple.JSONObject;
 
+import com.language.App;
 import com.model.DataLoader;
 import com.model.Word;
 
@@ -36,6 +37,15 @@ public class  MostCommonWordsController{
 
         // Display the first word
         displayNextWord();
+    }
+
+    // Method to go back
+    @FXML private void goBack() {
+        try {
+            App.setRoot("homepage"); 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void displayNextWord() {

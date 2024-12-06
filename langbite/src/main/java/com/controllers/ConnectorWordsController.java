@@ -56,6 +56,15 @@ public class ConnectorWordsController {
         }
     }
 
+    // Method to go back
+    @FXML private void goBack() {
+        try {
+            App.setRoot("homepage"); 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @FXML private void goToProfile() {
         try {
             App.setRoot("profile"); // Navigate to profile.fxml

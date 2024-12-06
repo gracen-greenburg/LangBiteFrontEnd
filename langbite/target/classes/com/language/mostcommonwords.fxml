@@ -16,7 +16,7 @@
     
     
     <HBox alignment="CENTER" maxWidth="Infinity" spacing="20" style="-fx-padding: 10;">
-        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+        <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
             <image>
                 <Image url="@images/backarrow.png" />
             </image>

@@ -71,6 +71,15 @@ public class SignUpController {
 
     }
 
+    // Method to navigate back to login
+    @FXML private void switchToLogin() {
+        try {
+            App.setRoot("loginScreen"); 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
