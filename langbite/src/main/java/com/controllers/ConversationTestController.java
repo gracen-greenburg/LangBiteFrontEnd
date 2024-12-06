@@ -1,16 +1,10 @@
 package com.controllers;
 
-import java.util.Map;
-
-import com.language.App;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class ConversationTestController {
@@ -21,78 +15,31 @@ public class ConversationTestController {
     @FXML
     private Button submitButton;
 
-    private int questionNumber = 1;
-
-    private final Map<Integer, String> answers = Map.of(
-        1, "green",
-        2, "blue",
-        3, "Red"
-    );
-
-    private final Map<Integer, String> nextScreens = Map.of(
-        1, "conversation2.fxml",
-        2, "conversation3.fxml"
-    );
-
     @FXML
     public void initialize() {
-        submitButton.setOnAction(event -> handleSubmit());
-    }
-
-    private void handleSubmit() {
-        String answer = userInput.getText().trim().toLowerCase();
-        if (answers.get(questionNumber).equals(answer)) {
-            userInput.setStyle("-fx-border-color: green;");
-            if (questionNumber < 3) {
-                loadNextQuestion(nextScreens.get(questionNumber));
+        submitButton.setOnAction(event -> {
+            String input = userInput.getText().trim().toLowerCase();
+            System.out.println("User input: " + input); // Debugging
+            if (input.equals("vert")) {
+                System.out.println("Correct answer entered!");
+                loadCorrectScreen();
             } else {
-                loadFinalScreen();
+                System.out.println("Incorrect answer.");
+                userInput.clear();
+                userInput.setStyle("-fx-border-color: red;");
+                userInput.setPromptText("Try again!");
             }
-        } else {
-            userInput.setStyle("-fx-border-color: red;");
-            userInput.clear();
-            userInput.setPromptText("Try again!");
-        }
+        });
     }
 
-    private void loadNextQuestion(String nextFXML) {
+    private void loadCorrectScreen() {
         try {
-            questionNumber++;
-            Stage stage = (Stage) submitButton.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/" + nextFXML));
-            Scene nextScene = new Scene(loader.load());
-            stage.setScene(nextScene);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/conversationscorrect.fxml"));
+            Scene correctScene = new Scene(loader.load());
+            Stage stage = (Stage) userInput.getScene().getWindow();
+            stage.setScene(correctScene);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-    private void loadFinalScreen() {
-        try {
-            Stage stage = (Stage) submitButton.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/language/AllAnswersCorrect.fxml"));
-            Scene finalScene = new Scene(loader.load());
-            stage.setScene(finalScene);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML private void goHomePage(MouseEvent event) {
-        try {
-            App.setRoot("homepage");
-        } catch (Exception e) {
-            e.printStackTrace();
-            showAlert(Alert.AlertType.ERROR, "Error", "Failed to navigate to the homepage");
-        }
-    }
-
-    private void showAlert(Alert.AlertType alertType, String title, String message) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
-
 }

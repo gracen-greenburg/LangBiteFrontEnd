@@ -9,59 +9,39 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" spacing="15" style="-fx-background-color: #f5f5f5;" 
-      prefHeight="700.0" prefWidth="400.0" stylesheets="@styles.css"
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="25"
+      style="-fx-background-color: #f5f5f5;" stylesheets="@styles.css"
       xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.controllers.ConversationTestController">
 
     <!-- Header Section -->
-    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 10;">
-        <ImageView fx:id="backArrowImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" onMouseClicked="#goHomePage">
-            <image>
-                <Image url="@images/backarrow.png" />
-            </image>
+    <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #649a38; -fx-padding: 20;">
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <Image url="@images/backarrow.png" />
         </ImageView>
-        <Region HBox.hgrow="ALWAYS" />
-        <Label style="-fx-font-size: 53px; -fx-text-fill: white;" styleClass="title" text="Conversations" />
-        <Region HBox.hgrow="ALWAYS" />
+        <Label text="Conversations" style="-fx-font-size: 24px; -fx-text-fill: white;" />
     </HBox>
 
+    <!-- Spacer to Push Content -->
+    <Region VBox.vgrow="ALWAYS" />
+
     <!-- Question Section -->
-    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 40; -fx-background-color: #ffffff; -fx-border-color: #649a38; -fx-border-width: 2; -fx-border-radius: 15; -fx-background-radius: 15; -fx-pref-height: 400.0;">
-        <Label text="What color is grass?" style="-fx-font-size: 24px; -fx-text-fill: #649a38; -fx-font-weight: bold;" />
-        <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30;">
+        <Label text="What color is grass in French?" style="-fx-font-size: 22px; -fx-text-fill: #649a38; -fx-font-weight: bold;" />
+        <ImageView fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@images/grass.png" />
         </ImageView>
     </VBox>
 
     <!-- User Input Section -->
-    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
-        <Label text="Your Answer:" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
-        <TextField fx:id="userInput" promptText="Type your answer here..." 
-                   style="-fx-pref-width: 350px; -fx-pref-height: 50px; -fx-background-color: #ffffff; -fx-border-color: #649a38; -fx-border-radius: 10; -fx-padding: 10;" />
-        <Button text="Submit" fx:id="submitButton" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 15; -fx-min-width: 200px; -fx-border-radius: 20; -fx-background-radius: 20;" />
-        <Label fx:id="progressLabel" text="1/3" style="-fx-font-size: 18px; -fx-text-fill: #808080;" />
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30;">
+        <Label text="Your Answer:" style="-fx-font-size: 20px; -fx-text-fill: #808080;" />
+        <TextField fx:id="userInput" promptText="Type your answer here..." style="-fx-pref-width: 350px; -fx-background-color: #ffffff; -fx-border-color: #649a38; -fx-border-radius: 8; -fx-padding: 8;" />
+        <Button text="Submit" fx:id="submitButton" style="-fx-background-color: #649a38; -fx-text-fill: white; -fx-font-size: 18px; -fx-padding: 10; -fx-min-width: 200px;" />
     </VBox>
 
-    <!-- Footer Navigation -->
-    <!-- <HBox alignment="CENTER" spacing="50" style="-fx-background-color: #649a38; -fx-padding: 15; -fx-border-radius: 0;" VBox.vgrow="ALWAYS">
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/home_icon.png" />
-            </ImageView>
-            <Label text="Home" style="-fx-text-fill: white; -fx-font-size: 14px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/stats_icon.png" />
-            </ImageView>
-            <Label text="Stats" style="-fx-text-fill: white; -fx-font-size: 14px;" />
-        </VBox>
-        <VBox alignment="CENTER">
-            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/settings_icon.png" />
-            </ImageView>
-            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 14px;" />
-        </VBox>
-    </HBox> -->
+    <!-- Spacer to Push Footer -->
+    <Region VBox.vgrow="ALWAYS" />
+
+    
 </VBox>
