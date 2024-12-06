@@ -92,6 +92,16 @@ public class HomePageController {
 
     }
 
+    @FXML private void gotoProfile() {
+        try {
+            App.setRoot("profile"); // Navigate to homepage.fxml
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load homepage.");
+        }
+    }
+
+
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);

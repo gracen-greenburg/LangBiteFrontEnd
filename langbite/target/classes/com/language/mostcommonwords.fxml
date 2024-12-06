@@ -53,12 +53,6 @@
 
 
     <HBox prefHeight="100.0" prefWidth="200.0">
-
-      <ImageView fx:id="homepageButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToHomepage" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
-         <image>
-            <Image url="@images/homepagebutton.png" />
-         </image>
-      </ImageView>
       <GridPane prefHeight="100.0" prefWidth="297.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -70,13 +64,6 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-
-      
-      <ImageView fx:id="profileButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" HBox.hgrow="ALWAYS">
-         <image>
-            <Image url="@images/profilebutton.png" />
-         </image>
-      </ImageView>
       </HBox>
 
 </VBox>
