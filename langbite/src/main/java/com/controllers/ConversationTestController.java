@@ -1,5 +1,9 @@
 package com.controllers;
 
+import java.io.IOException;
+
+import com.language.App;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -30,6 +34,15 @@ public class ConversationTestController {
                 userInput.setPromptText("Try again!");
             }
         });
+    }
+
+    // Method to go back
+    @FXML private void goBack() {
+        try {
+            App.setRoot("homepage"); 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadCorrectScreen() {
