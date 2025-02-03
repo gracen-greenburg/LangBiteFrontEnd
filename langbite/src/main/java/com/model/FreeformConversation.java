@@ -26,8 +26,6 @@ import org.json.simple.parser.ParseException;
  */
 public class FreeformConversation {
 
-    private static final String OPENAI_API_KEY = "sk-uibot-SDERjvxOED1qa9a4YpQsT3BlbkFJB7ocCfsZJ3aIKeg69fo4"; // Replace with your actual API key
-    private static final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
     private static final String WORD_BANK_FILE = "LangBite\\.vscode\\CurrentWords.json";
 
     private List<String> wordBank;
